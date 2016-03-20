@@ -8,6 +8,16 @@
 
 #import "GTMBase64.h"
 
-@interface GTMBase64 (Des)
+#import <CommonCrypto/CommonCryptor.h>
+
+@interface GTMBase64 (DES)
++ (NSString *)desEncrypt:(NSString *)plainText;
+
++ (NSString *)desDecrypt:(NSString *)encryptText;
+
++ (NSString *)des:(NSString*)text
+           desKey:(NSString *)desKey
+            desIV:(NSString *)desIV
+        operation:(CCOperation)operation;
 
 @end
