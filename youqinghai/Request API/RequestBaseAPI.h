@@ -16,6 +16,8 @@ typedef NS_ENUM(NSUInteger,RequestAPIType) {
 
 @interface RequestBaseAPI : NSObject
 
++ (instancetype)standardAPI;
+
 /**
  *  POST请求
  *
@@ -25,9 +27,7 @@ typedef NS_ENUM(NSUInteger,RequestAPIType) {
  *  @param params    请求参数
  */
 - (RACSignal *)requestWithType:(RequestAPIType)type
-                           url:(NSString *)url
-                       timeout:(NSTimeInterval)timeout
-                        params:(NSDictionary *)params;
+                        params:(NSString *)params;
 
 
 

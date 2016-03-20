@@ -9,9 +9,27 @@
 #import "RequestBaseAPI.h"
 #import "ResponseBaseData.h"
 
-#define RequestUrl @""
+#define RequestUrl @"http://www.sinata.cn:9402/swimQinghai"
 
 @implementation RequestBaseAPI
+
++(instancetype)standardAPI{
+    static RequestBaseAPI *requestBaseAPI;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        requestBaseAPI = [[[self class] alloc] init];
+    });
+    
+    return requestBaseAPI;
+}
+
+-(instancetype)init{
+    
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
 
 #pragma mark - 基本
 - (void)setHeadersForRequestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer withParametersLength:(NSInteger)length{
@@ -22,29 +40,26 @@
 
 #pragma mark - 基础请求
 - (RACSignal *)requestWithType:(RequestAPIType)type
-                           url:(NSString *)url
-                       timeout:(NSTimeInterval)timeout
-                        params:(NSDictionary *)params{
+                        params:(NSString *)params{
     
-    if (type < RequestAPITypeGet || type > RequestAPITypeGet) {
+    if (type < RequestAPITypeGet || type > RequestAPITypePost) {
         NSError *error = [NSError errorWithDomain:@"请求类型异常" code:-1001 userInfo:nil];
         return [RACSignal error:error];
     }
     RACSignal *resultSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSInteger length = 0;
-        NSDictionary *restParams = [self restParamsForOriginalParam:params length:&length];
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         [self setHeadersForRequestSerializer:manager.requestSerializer withParametersLength:length];
-        if (timeout > 0) {
-            [manager.requestSerializer setTimeoutInterval:timeout];
-        }
+
+        [manager.requestSerializer setTimeoutInterval:30];
+        
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", @"text/html", nil];
-        NSString *urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *urlString = [[NSString stringWithFormat:@"%@app.server?key=%@",RequestUrl,params] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         YQHLog(@"Request -->\n" "URL:  %@\n" "Headers:\n%@\n" "Parameters:\n%@\n",urlString,manager.requestSerializer.HTTPRequestHeaders,params);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         switch (type) {
             case RequestAPITypeGet: {
-                NSURLSessionDataTask *task = [manager GET:urlString parameters:restParams progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+                NSURLSessionDataTask *task = [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                     
                     [self processResponseObject:responseObject forTask:task subscriber:subscriber];
                     
@@ -61,7 +76,7 @@
                 }];
             }
             case RequestAPITypePost: {
-                NSURLSessionDataTask *task = [manager POST:urlString parameters:restParams progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+                NSURLSessionDataTask *task = [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                     [self processResponseObject:responseObject forTask:task subscriber:subscriber];
                 } failure:^(NSURLSessionDataTask *task, NSError *error) {
                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
