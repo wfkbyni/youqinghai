@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) NSString *message;
 @property (nonatomic, assign) NSInteger result_code;
-@property (nonatomic, strong) NSDictionary *result_data;
+@property (nonatomic, strong) NSString *result_data;
 
 @end

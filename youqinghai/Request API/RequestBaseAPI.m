@@ -8,8 +8,9 @@
 
 #import "RequestBaseAPI.h"
 #import "ResponseBaseData.h"
+#import "GTMBase64+Des.h"
 
-#define RequestUrl @"http://www.sinata.cn:9402/swimQinghai"
+#define RequestUrl @"http://www.sinata.cn:9402/swimQinghai/"
 
 @implementation RequestBaseAPI
 
@@ -55,7 +56,7 @@
         
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", @"text/html", nil];
         NSString *urlString = [[NSString stringWithFormat:@"%@app.server?key=%@",RequestUrl,params] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        YQHLog(@"Request -->\n" "URL:  %@\n" "Headers:\n%@\n" "Parameters:\n%@\n",urlString,manager.requestSerializer.HTTPRequestHeaders,params);
+        YQHLog(@"Request -->\n" "URL:  %@\n" "Headers:\n%@\n" "Parameters:\n%@\n",urlString,manager.requestSerializer.HTTPRequestHeaders,[GTMBase64 desDecrypt:params]);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         switch (type) {
             case RequestAPITypeGet: {
@@ -172,15 +173,26 @@
                       forTask:(NSURLSessionDataTask *)task
                    subscriber:(id<RACSubscriber> )subscriber{
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    //解析结果
-    YQHLog(@"Response  -->\n" "URL:  %@\n" "data:\n%@\n", task.currentRequest.URL, responseObject);
+    
     ResponseBaseData *responseBaseData = [ResponseBaseData mj_objectWithKeyValues:responseObject];
     if (responseBaseData.result_code == 0) {
-        [subscriber sendNext:responseBaseData.result_data];
+        
+        NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+        // 字符串转Data
+        NSString *str =responseBaseData.result_data;
+        NSData *data =[str dataUsingEncoding:enc];
+        //NSData 转NSString
+        NSString *result  =[[NSString alloc] initWithData:data encoding:enc];
+        
+        NSString *value = [GTMBase64 desDecrypt:result];
+        
+        //解析结果
+        YQHLog(@"Response  -->\n" "URL:  %@\n" "data:\n%@\n", task.currentRequest.URL, value);
+        
+        [subscriber sendNext:value];
         [subscriber sendCompleted];
     }
     else{
-        
         NSError *error = [NSError errorWithDomain:@"数据响应异常" code:responseBaseData.result_code userInfo:responseObject];
         [subscriber sendError:error];
     }

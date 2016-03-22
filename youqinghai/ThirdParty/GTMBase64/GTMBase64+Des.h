@@ -11,13 +11,22 @@
 #import <CommonCrypto/CommonCryptor.h>
 
 @interface GTMBase64 (DES)
+/**
+ *  @brief 加密
+ *
+ *  @param plainText <#plainText description#>
+ *
+ *  @return <#return value description#>
+ */
 + (NSString *)desEncrypt:(NSString *)plainText;
 
+/**
+ *  @brief 解密
+ *
+ *  @param encryptText <#encryptText description#>
+ *
+ *  @return <#return value description#>
+ */
 + (NSString *)desDecrypt:(NSString *)encryptText;
-
-+ (NSString *)des:(NSString*)text
-           desKey:(NSString *)desKey
-            desIV:(NSString *)desIV
-        operation:(CCOperation)operation;
 
 @end
