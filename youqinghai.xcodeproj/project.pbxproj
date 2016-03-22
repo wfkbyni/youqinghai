@@ -13,8 +13,15 @@
 		9A1FEB441C9EEA120067B8D5 /* ResponseBaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB431C9EEA120067B8D5 /* ResponseBaseData.m */; };
 		9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB481C9EF3C90067B8D5 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB4F1C9EF44A0067B8D5 /* GTMBase64+Des.m */; };
-		9A1FEB531C9EF6530067B8D5 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB521C9EF6530067B8D5 /* TestViewModel.m */; };
 		9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */; };
+		9A637DAD1CA17EFE004D17BA /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DAC1CA17EFE004D17BA /* Recommend.m */; };
+		9A637DB01CA17FF2004D17BA /* TourismType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DAF1CA17FF2004D17BA /* TourismType.m */; };
+		9A637DB31CA1809B004D17BA /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB21CA1809B004D17BA /* Banner.m */; };
+		9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB51CA182FB004D17BA /* MainViewModel.m */; };
+		9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */; };
+		9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBC1CA18711004D17BA /* MainViewController.m */; };
+		9A637DC11CA18993004D17BA /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBF1CA18993004D17BA /* TempViewController.m */; };
+		9A637DC21CA18993004D17BA /* TempViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DC01CA18993004D17BA /* TempViewController.xib */; };
 		9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0111C9ED3E100AD2FC1 /* main.m */; };
 		9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0141C9ED3E100AD2FC1 /* AppDelegate.m */; };
 		9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1C01C1C9ED3E100AD2FC1 /* Assets.xcassets */; };
@@ -38,10 +45,23 @@
 		9A1FEB491C9EF3C90067B8D5 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		9A1FEB4E1C9EF44A0067B8D5 /* GTMBase64+Des.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMBase64+Des.h"; sourceTree = "<group>"; };
 		9A1FEB4F1C9EF44A0067B8D5 /* GTMBase64+Des.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMBase64+Des.m"; sourceTree = "<group>"; };
-		9A1FEB511C9EF6530067B8D5 /* TestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewModel.h; sourceTree = "<group>"; };
-		9A1FEB521C9EF6530067B8D5 /* TestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewModel.m; sourceTree = "<group>"; };
 		9A1FEB551C9EF69A0067B8D5 /* RequestBaseAPI+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+User.h"; sourceTree = "<group>"; };
 		9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RequestBaseAPI+User.m"; sourceTree = "<group>"; };
+		9A637DAB1CA17EFE004D17BA /* Recommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend.h; sourceTree = "<group>"; };
+		9A637DAC1CA17EFE004D17BA /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
+		9A637DAE1CA17FF2004D17BA /* TourismType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismType.h; sourceTree = "<group>"; };
+		9A637DAF1CA17FF2004D17BA /* TourismType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismType.m; sourceTree = "<group>"; };
+		9A637DB11CA1809B004D17BA /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
+		9A637DB21CA1809B004D17BA /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
+		9A637DB41CA182FB004D17BA /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		9A637DB51CA182FB004D17BA /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+Main.h"; sourceTree = "<group>"; };
+		9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RequestBaseAPI+Main.m"; sourceTree = "<group>"; };
+		9A637DBB1CA18711004D17BA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9A637DBC1CA18711004D17BA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9A637DBE1CA18993004D17BA /* TempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
+		9A637DBF1CA18993004D17BA /* TempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
+		9A637DC01CA18993004D17BA /* TempViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempViewController.xib; sourceTree = "<group>"; };
 		9AF1C00D1C9ED3E100AD2FC1 /* youqinghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youqinghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1C0111C9ED3E100AD2FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,9 +104,10 @@
 		9A1FEB341C9EE1470067B8D5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9A1FEB351C9EE1470067B8D5 /* Model */,
+				9A637DBA1CA186EE004D17BA /* Controller */,
 				9A1FEB361C9EE1470067B8D5 /* View */,
 				9A1FEB371C9EE1470067B8D5 /* ViewModel */,
+				9A1FEB351C9EE1470067B8D5 /* Model */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -94,8 +115,12 @@
 		9A1FEB351C9EE1470067B8D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9A1FEB511C9EF6530067B8D5 /* TestViewModel.h */,
-				9A1FEB521C9EF6530067B8D5 /* TestViewModel.m */,
+				9A637DAB1CA17EFE004D17BA /* Recommend.h */,
+				9A637DAC1CA17EFE004D17BA /* Recommend.m */,
+				9A637DAE1CA17FF2004D17BA /* TourismType.h */,
+				9A637DAF1CA17FF2004D17BA /* TourismType.m */,
+				9A637DB11CA1809B004D17BA /* Banner.h */,
+				9A637DB21CA1809B004D17BA /* Banner.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +135,8 @@
 		9A1FEB371C9EE1470067B8D5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9A637DB41CA182FB004D17BA /* MainViewModel.h */,
+				9A637DB51CA182FB004D17BA /* MainViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -132,6 +159,8 @@
 				9A1FEB541C9EF65F0067B8D5 /* ResponseBaseData */,
 				9A1FEB551C9EF69A0067B8D5 /* RequestBaseAPI+User.h */,
 				9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */,
+				9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */,
+				9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */,
 			);
 			path = "Request API";
 			sourceTree = "<group>";
@@ -165,6 +194,15 @@
 			name = ResponseBaseData;
 			sourceTree = "<group>";
 		};
+		9A637DBA1CA186EE004D17BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A637DBB1CA18711004D17BA /* MainViewController.h */,
+				9A637DBC1CA18711004D17BA /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9AF1C0041C9ED3E100AD2FC1 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +234,9 @@
 				9AF1C01E1C9ED3E100AD2FC1 /* LaunchScreen.storyboard */,
 				9AF1C0211C9ED3E100AD2FC1 /* Info.plist */,
 				9AF1C0101C9ED3E100AD2FC1 /* Supporting Files */,
+				9A637DBE1CA18993004D17BA /* TempViewController.h */,
+				9A637DBF1CA18993004D17BA /* TempViewController.m */,
+				9A637DC01CA18993004D17BA /* TempViewController.xib */,
 			);
 			path = youqinghai;
 			sourceTree = "<group>";
@@ -270,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A637DC21CA18993004D17BA /* TempViewController.xib in Resources */,
 				9AF1C0201C9ED3E100AD2FC1 /* LaunchScreen.storyboard in Resources */,
 				9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */,
 			);
@@ -331,13 +373,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */,
+				9A637DB31CA1809B004D17BA /* Banner.m in Sources */,
+				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
 				9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */,
 				9A1FEB441C9EEA120067B8D5 /* ResponseBaseData.m in Sources */,
 				9A1FEB401C9EE4D20067B8D5 /* RequestBaseAPI.m in Sources */,
+				9A637DAD1CA17EFE004D17BA /* Recommend.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
+				9A637DB01CA17FF2004D17BA /* TourismType.m in Sources */,
 				9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */,
+				9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */,
+				9A637DC11CA18993004D17BA /* TempViewController.m in Sources */,
 				9A1FEB3B1C9EE1770067B8D5 /* BaseViewController.m in Sources */,
-				9A1FEB531C9EF6530067B8D5 /* TestViewModel.m in Sources */,
+				9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */,
 				9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

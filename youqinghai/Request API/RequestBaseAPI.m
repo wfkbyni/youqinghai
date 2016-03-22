@@ -177,14 +177,9 @@
     ResponseBaseData *responseBaseData = [ResponseBaseData mj_objectWithKeyValues:responseObject];
     if (responseBaseData.result_code == 0) {
         
-        NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-        // 字符串转Data
-        NSString *str =responseBaseData.result_data;
-        NSData *data =[str dataUsingEncoding:enc];
-        //NSData 转NSString
-        NSString *result  =[[NSString alloc] initWithData:data encoding:enc];
         
-        NSString *value = [GTMBase64 desDecrypt:result];
+        NSString *string = responseBaseData.result_data;
+        NSString *value = [GTMBase64 desDecrypt:string];
         
         //解析结果
         YQHLog(@"Response  -->\n" "URL:  %@\n" "data:\n%@\n", task.currentRequest.URL, value);

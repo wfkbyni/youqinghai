@@ -4,3 +4,4 @@ inhibit_all_warnings!
 pod 'AFNetworking'
 pod 'ReactiveCocoa'
 pod 'MJExtension'
+pod 'SDWebImage'

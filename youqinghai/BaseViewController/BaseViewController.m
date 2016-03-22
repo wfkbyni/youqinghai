@@ -7,11 +7,9 @@
 //
 
 #import "BaseViewController.h"
-#import "TestViewModel.h"
 
 @interface BaseViewController ()
 
-@property (nonatomic, strong) TestViewModel *testViewModel;
 @end
 
 @implementation BaseViewController
@@ -19,11 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    _testViewModel = [[TestViewModel alloc] init];
-    [[_testViewModel registerUser] subscribeNext:^(id x) {
-        
-    }];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
