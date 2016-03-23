@@ -9,6 +9,8 @@
 #ifndef Common_h
 #define Common_h
 
+#define kScreenSize          [UIScreen mainScreen].bounds.size
+
 #pragma mark - 调试
 #define YQH_DEBUG
 

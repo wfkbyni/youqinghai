@@ -22,6 +22,13 @@
 		9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBC1CA18711004D17BA /* MainViewController.m */; };
 		9A637DC11CA18993004D17BA /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBF1CA18993004D17BA /* TempViewController.m */; };
 		9A637DC21CA18993004D17BA /* TempViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DC01CA18993004D17BA /* TempViewController.xib */; };
+		9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DC41CA2D7D6004D17BA /* TourismTypeCell.m */; };
+		9A637DC71CA2D7D6004D17BA /* TourismTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DC51CA2D7D6004D17BA /* TourismTypeCell.xib */; };
+		9A637DCB1CA2D8AC004D17BA /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DCA1CA2D8AC004D17BA /* UIView+Helper.m */; };
+		9A637DCE1CA2DBEE004D17BA /* TourismTypeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DCD1CA2DBEE004D17BA /* TourismTypeItemCell.m */; };
+		9A637DD01CA2DBFF004D17BA /* TourismTypeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DCF1CA2DBFF004D17BA /* TourismTypeItemCell.xib */; };
+		9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */; };
+		9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */; };
 		9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0111C9ED3E100AD2FC1 /* main.m */; };
 		9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0141C9ED3E100AD2FC1 /* AppDelegate.m */; };
 		9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1C01C1C9ED3E100AD2FC1 /* Assets.xcassets */; };
@@ -62,6 +69,17 @@
 		9A637DBE1CA18993004D17BA /* TempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
 		9A637DBF1CA18993004D17BA /* TempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
 		9A637DC01CA18993004D17BA /* TempViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempViewController.xib; sourceTree = "<group>"; };
+		9A637DC31CA2D7D6004D17BA /* TourismTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismTypeCell.h; sourceTree = "<group>"; };
+		9A637DC41CA2D7D6004D17BA /* TourismTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismTypeCell.m; sourceTree = "<group>"; };
+		9A637DC51CA2D7D6004D17BA /* TourismTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TourismTypeCell.xib; sourceTree = "<group>"; };
+		9A637DC91CA2D8AC004D17BA /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
+		9A637DCA1CA2D8AC004D17BA /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
+		9A637DCC1CA2DBEE004D17BA /* TourismTypeItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismTypeItemCell.h; sourceTree = "<group>"; };
+		9A637DCD1CA2DBEE004D17BA /* TourismTypeItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismTypeItemCell.m; sourceTree = "<group>"; };
+		9A637DCF1CA2DBFF004D17BA /* TourismTypeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TourismTypeItemCell.xib; sourceTree = "<group>"; };
+		9A637DD11CA2E580004D17BA /* RecommendTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendTypeCell.h; sourceTree = "<group>"; };
+		9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendTypeCell.m; sourceTree = "<group>"; };
+		9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTypeCell.xib; sourceTree = "<group>"; };
 		9AF1C00D1C9ED3E100AD2FC1 /* youqinghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youqinghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1C0111C9ED3E100AD2FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +146,15 @@
 		9A1FEB361C9EE1470067B8D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9A637DC31CA2D7D6004D17BA /* TourismTypeCell.h */,
+				9A637DC41CA2D7D6004D17BA /* TourismTypeCell.m */,
+				9A637DC51CA2D7D6004D17BA /* TourismTypeCell.xib */,
+				9A637DCC1CA2DBEE004D17BA /* TourismTypeItemCell.h */,
+				9A637DCD1CA2DBEE004D17BA /* TourismTypeItemCell.m */,
+				9A637DCF1CA2DBFF004D17BA /* TourismTypeItemCell.xib */,
+				9A637DD11CA2E580004D17BA /* RecommendTypeCell.h */,
+				9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */,
+				9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +230,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		9A637DC81CA2D89E004D17BA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A637DC91CA2D8AC004D17BA /* UIView+Helper.h */,
+				9A637DCA1CA2D8AC004D17BA /* UIView+Helper.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		9AF1C0041C9ED3E100AD2FC1 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +260,7 @@
 		9AF1C00F1C9ED3E100AD2FC1 /* youqinghai */ = {
 			isa = PBXGroup;
 			children = (
+				9A637DC81CA2D89E004D17BA /* Common */,
 				9A1FEB451C9EF3C90067B8D5 /* ThirdParty */,
 				9A1FEB3C1C9EE2CA0067B8D5 /* Request API */,
 				9A1FEB381C9EE1770067B8D5 /* BaseViewController */,
@@ -312,7 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A637DC21CA18993004D17BA /* TempViewController.xib in Resources */,
+				9A637DD01CA2DBFF004D17BA /* TourismTypeItemCell.xib in Resources */,
+				9A637DC71CA2D7D6004D17BA /* TourismTypeCell.xib in Resources */,
 				9AF1C0201C9ED3E100AD2FC1 /* LaunchScreen.storyboard in Resources */,
+				9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */,
 				9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +412,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */,
 				9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */,
+				9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */,
 				9A637DB31CA1809B004D17BA /* Banner.m in Sources */,
 				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
 				9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */,
@@ -381,9 +423,11 @@
 				9A637DAD1CA17EFE004D17BA /* Recommend.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
 				9A637DB01CA17FF2004D17BA /* TourismType.m in Sources */,
+				9A637DCE1CA2DBEE004D17BA /* TourismTypeItemCell.m in Sources */,
 				9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */,
 				9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */,
 				9A637DC11CA18993004D17BA /* TempViewController.m in Sources */,
+				9A637DCB1CA2D8AC004D17BA /* UIView+Helper.m in Sources */,
 				9A1FEB3B1C9EE1770067B8D5 /* BaseViewController.m in Sources */,
 				9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */,
 				9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */,

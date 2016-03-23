@@ -177,8 +177,8 @@
     ResponseBaseData *responseBaseData = [ResponseBaseData mj_objectWithKeyValues:responseObject];
     if (responseBaseData.result_code == 0) {
         
-        
         NSString *string = responseBaseData.result_data;
+        
         NSString *value = [GTMBase64 desDecrypt:string];
         
         //解析结果

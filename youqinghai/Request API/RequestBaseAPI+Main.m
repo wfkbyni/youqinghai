@@ -8,15 +8,18 @@
 
 #import "RequestBaseAPI+Main.h"
 
-NSString *const getHomePageData = @"app/homepage/getHomePageData/";
+NSString *const getHomePageData = @"app/homepage/getHomePageData";
 
 @implementation RequestBaseAPI (Main)
 
 -(RACSignal *)getHomePageDataWithMark:(NSInteger)mark withPageIndex:(NSInteger)pageIndex withPageSize:(NSInteger)pageSize{
     
-    NSString *params = [NSString stringWithFormat:@"server=%@mark=%ld&pageIndex=%ld&pageSize=%ld",getHomePageData,mark,pageIndex,pageSize];
+    NSString *params = [NSString stringWithFormat:@"server=%@&mark=%ld&pageIndex=%ld&pageSize=%ld",getHomePageData,mark,pageIndex,pageSize];
     params = [GTMBase64 desEncrypt:params];
+    
+    params = [params stringByReplacingOccurrencesOfString:@"+" withString:@" "];
     
     return [self requestWithType:RequestAPITypePost params:params];
 }
 @end
+
