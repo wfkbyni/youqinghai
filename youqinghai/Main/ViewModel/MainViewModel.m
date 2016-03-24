@@ -9,6 +9,8 @@
 #import "MainViewModel.h"
 #import "RequestBaseAPI+Main.h"
 
+#import "HomePageData.h"
+
 @implementation MainViewModel
 
 -(instancetype)init{
@@ -18,13 +20,14 @@
     return self;
 }
 
-
 -(RACSignal *)getHomePageData{
     
-    RACSignal *signal = [[RequestBaseAPI standardAPI] getHomePageDataWithMark:self.mark withPageIndex:1 withPageSize:20];
-    
-    [signal subscribeNext:^(id x) {
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getHomePageDataWithMark:self.mark withPageIndex:1 withPageSize:20]
+                         map:^id(id value) {
         
+        self.homePageData = [HomePageData mj_objectWithKeyValues:value];
+        
+        return self.homePageData;
     }];
     
     return signal;

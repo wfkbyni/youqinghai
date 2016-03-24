@@ -14,10 +14,8 @@ NSString *const getHomePageData = @"app/homepage/getHomePageData";
 
 -(RACSignal *)getHomePageDataWithMark:(NSInteger)mark withPageIndex:(NSInteger)pageIndex withPageSize:(NSInteger)pageSize{
     
-    NSString *params = [NSString stringWithFormat:@"server=%@&mark=%ld&pageIndex=%ld&pageSize=%ld",getHomePageData,mark,pageIndex,pageSize];
+    NSString *params = [NSString stringWithFormat:@"server=%@&pageIndex=%ld&pageSize=%ld",getHomePageData,pageIndex,pageSize];
     params = [GTMBase64 desEncrypt:params];
-    
-    params = [params stringByReplacingOccurrencesOfString:@"+" withString:@" "];
     
     return [self requestWithType:RequestAPITypePost params:params];
 }

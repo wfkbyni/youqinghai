@@ -22,31 +22,41 @@
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGr-qx-Az0">
-                        <rect key="frame" x="20" y="127" width="282" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="20" y="126.5" width="282" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsW-1h-VQ9">
-                        <rect key="frame" x="20" y="104.5" width="282" height="20.5"/>
+                        <rect key="frame" x="20" y="101.5" width="282" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-vb-d9C">
-                        <rect key="frame" x="232" y="18" width="70" height="30"/>
+                        <rect key="frame" x="232" y="10" width="70" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTr-p7-fCQ">
+                                <rect key="frame" x="17.5" y="6.5" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="KJb-fr-CuW"/>
                             <constraint firstAttribute="width" constant="70" id="PRP-he-JVB"/>
+                            <constraint firstItem="RTr-p7-fCQ" firstAttribute="centerY" secondItem="gfT-vb-d9C" secondAttribute="centerY" id="ZKh-0Z-k66"/>
+                            <constraint firstItem="RTr-p7-fCQ" firstAttribute="centerX" secondItem="gfT-vb-d9C" secondAttribute="centerX" id="z8N-9C-UCq"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="tsW-1h-VQ9" firstAttribute="bottom" secondItem="TGr-qx-Az0" secondAttribute="bottom" constant="-22.5" id="3vv-s4-zMa"/>
                     <constraint firstItem="TGr-qx-Az0" firstAttribute="trailing" secondItem="dbL-Xn-jC2" secondAttribute="trailing" constant="-8" id="42G-hn-Sv4"/>
-                    <constraint firstItem="TGr-qx-Az0" firstAttribute="bottom" secondItem="dbL-Xn-jC2" secondAttribute="bottom" constant="-2" id="4zL-ZJ-b4L"/>
-                    <constraint firstItem="gfT-vb-d9C" firstAttribute="top" secondItem="dbL-Xn-jC2" secondAttribute="top" constant="18" id="GgV-Pe-3QS"/>
+                    <constraint firstItem="TGr-qx-Az0" firstAttribute="bottom" secondItem="dbL-Xn-jC2" secondAttribute="bottom" constant="-5" id="4zL-ZJ-b4L"/>
+                    <constraint firstItem="gfT-vb-d9C" firstAttribute="top" secondItem="dbL-Xn-jC2" secondAttribute="top" constant="10" id="GgV-Pe-3QS"/>
                     <constraint firstAttribute="trailing" secondItem="dbL-Xn-jC2" secondAttribute="trailing" constant="10" id="PdK-SZ-l53"/>
                     <constraint firstItem="tsW-1h-VQ9" firstAttribute="trailing" secondItem="dbL-Xn-jC2" secondAttribute="trailing" constant="-8" id="RZy-WF-Ytf"/>
                     <constraint firstAttribute="bottom" secondItem="dbL-Xn-jC2" secondAttribute="bottom" constant="10" id="V0c-yO-Jep"/>
@@ -70,6 +80,8 @@
             <connections>
                 <outlet property="imgUrlBtn" destination="dbL-Xn-jC2" id="6Nj-0z-FTv"/>
                 <outlet property="introduceLab" destination="TGr-qx-Az0" id="P3Q-rw-yuH"/>
+                <outlet property="partakeLab" destination="RTr-p7-fCQ" id="LCI-xe-Zth"/>
+                <outlet property="partakeView" destination="gfT-vb-d9C" id="gJg-HS-RRT"/>
                 <outlet property="titleLab" destination="tsW-1h-VQ9" id="l2U-De-Up0"/>
             </connections>
         </tableViewCell>

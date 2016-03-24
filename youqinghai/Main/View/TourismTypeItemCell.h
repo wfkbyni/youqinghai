@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataModel.h"
 
 @interface TourismTypeItemCell : UICollectionViewCell
+
+@property (nonatomic, strong) TourismType *tourismType;
 
 @end

@@ -55,8 +55,9 @@
         [manager.requestSerializer setTimeoutInterval:30];
         
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", @"text/html", nil];
-        NSString *urlString = [[NSString stringWithFormat:@"%@app.server?key=%@",RequestUrl,params] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        YQHLog(@"Request -->\n" "URL:  %@\n" "Headers:\n%@\n" "Parameters:\n%@\n",urlString,manager.requestSerializer.HTTPRequestHeaders,[GTMBase64 desDecrypt:params]);
+        NSDictionary *dic = @{@"key":params};
+        NSString *urlString = [[NSString stringWithFormat:@"%@app.server",RequestUrl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        YQHLog(@"Request -->\n" "URL:  \n%@\n" "Parameters:\n%@\n     des:%@",urlString,[GTMBase64 desDecrypt:params],params);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         switch (type) {
             case RequestAPITypeGet: {
@@ -77,7 +78,7 @@
                 }];
             }
             case RequestAPITypePost: {
-                NSURLSessionDataTask *task = [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+                NSURLSessionDataTask *task = [manager POST:urlString parameters:dic progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                     [self processResponseObject:responseObject forTask:task subscriber:subscriber];
                 } failure:^(NSURLSessionDataTask *task, NSError *error) {
                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];

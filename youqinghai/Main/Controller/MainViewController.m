@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "RedirectViewController.h"
 
 #import "MainViewModel.h"
 
@@ -22,8 +23,8 @@
 
 @end
 
-#define tourismType @"TourismTypeCell"
-#define recommendType @"RecommendTypeCell"
+#define tourismTypeCell @"TourismTypeCell"
+#define recommendTypeCell @"RecommendTypeCell"
 
 @implementation MainViewController
 
@@ -31,18 +32,22 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
     self.navigationController.navigationBarHidden = YES;
     
-    self.mainViewModel = [[MainViewModel alloc] init];
-    [self.mainViewModel getHomePageData];
-    
-    self.myTableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
-    
     [self commonView];
+    
+    [self requestBindData];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)commonView{
+    
+    self.myTableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     
     _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.height) style:UITableViewStyleGrouped];
     _myTableView.tableFooterView = [UIView new];
@@ -53,16 +58,47 @@
     
     [self.view addSubview:_myTableView];
     
-    [_myTableView registerNib:[UINib nibWithNibName:tourismType bundle:nil] forCellReuseIdentifier:tourismType];
-    [_myTableView registerNib:[UINib nibWithNibName:recommendType bundle:nil] forCellReuseIdentifier:recommendType];
+    [_myTableView registerNib:[UINib nibWithNibName:tourismTypeCell bundle:nil] forCellReuseIdentifier:tourismTypeCell];
+    [_myTableView registerNib:[UINib nibWithNibName:recommendTypeCell bundle:nil] forCellReuseIdentifier:recommendTypeCell];
+}
+
+- (void)requestBindData{
+    self.mainViewModel = [[MainViewModel alloc] init];
+
+    [[self.mainViewModel getHomePageData] subscribeNext:^(HomePageData *hoemPageData) {
+        
+        [_myTableView setTableHeaderView:[self tableViewHeaderView]];
+        
+        [self.myTableView reloadData];
+        
+    }];
     
-    [_myTableView setTableHeaderView:[self tableViewHeaderView]];
 }
 
 - (UIView *)tableViewHeaderView{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, 200)];
-    [view setBackgroundColor:[UIColor redColor]];
-    return view;
+    
+    SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.width * 0.65) delegate:nil placeholderImage:nil];
+    
+    NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:[self.mainViewModel.homePageData.banner count]];
+    NSMutableArray *titleArray = [[NSMutableArray alloc] initWithCapacity:[self.mainViewModel.homePageData.banner count]];
+    [self.mainViewModel.homePageData.banner enumerateObjectsUsingBlock:^(Banner *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [imageArray addObject:obj.imgUrl];
+        [titleArray addObject:obj.title];
+    }];
+    
+    scrollView.imageURLStringsGroup = imageArray;
+    scrollView.titlesGroup = titleArray;
+    
+    [scrollView setClickItemOperationBlock:^(NSInteger index) {
+        Banner *banner = self.mainViewModel.homePageData.banner[index];
+        
+        RedirectViewController *controller = [[RedirectViewController alloc] init];
+        controller.banner = banner;
+        
+        [self.navigationController pushViewController:controller animated:YES];
+    }];
+    
+    return scrollView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -122,7 +158,7 @@
     if (section == 0) {
         return 1;
     }else{
-        return arc4random_uniform(20);
+        return self.mainViewModel.homePageData.recommend.count;
     }
 }
 
@@ -137,12 +173,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 0) {
-        TourismTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:tourismType forIndexPath:indexPath];
-
+        TourismTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:tourismTypeCell forIndexPath:indexPath];
+        cell.tourismTypes = self.mainViewModel.homePageData.tourismType;
         return cell;
     }else{
-        RecommendTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendType forIndexPath:indexPath];
-        
+        RecommendTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTypeCell forIndexPath:indexPath];
+        cell.recommend = self.mainViewModel.homePageData.recommend[indexPath.row];
         return cell;
     }
 }

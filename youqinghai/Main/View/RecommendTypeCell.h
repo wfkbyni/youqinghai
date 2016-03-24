@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataModel.h"
 
 @interface RecommendTypeCell : UITableViewCell
+
+@property (nonatomic, strong) Recommend *recommend;
 
 @end

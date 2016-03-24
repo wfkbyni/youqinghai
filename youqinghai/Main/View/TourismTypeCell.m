@@ -27,6 +27,13 @@
     self.myCollectionView.delegate = self;
     
     [self.myCollectionView reloadData];
+    
+    [self.contentView viewWithCornerRadius:5];
+}
+
+- (void)setTourismTypes:(NSArray *)tourismTypes{
+    _tourismTypes = tourismTypes;
+    [self.myCollectionView reloadData];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -36,13 +43,14 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return arc4random_uniform(20);
+    return self.tourismTypes.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     TourismTypeItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
+    cell.tourismType = self.tourismTypes[indexPath.row];
     [cell.contentView setBackgroundColor:[UIColor clearColor]];
     
     cell.layer.borderColor = [UIColor colorWithRed:arc4random_uniform(255.0f) / 255.0f green:arc4random_uniform(255.0f) / 255.0f blue:arc4random_uniform(255.0f) / 255.0f alpha:1].CGColor;

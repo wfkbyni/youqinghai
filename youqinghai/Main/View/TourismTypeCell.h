@@ -10,4 +10,6 @@
 
 @interface TourismTypeCell : UITableViewCell
 
+@property (nonatomic, strong) NSArray *tourismTypes;
+
 @end

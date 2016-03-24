@@ -29,6 +29,9 @@
 		9A637DD01CA2DBFF004D17BA /* TourismTypeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DCF1CA2DBFF004D17BA /* TourismTypeItemCell.xib */; };
 		9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */; };
 		9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */; };
+		9A637DD81CA41A9C004D17BA /* HomePageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DD71CA41A9C004D17BA /* HomePageData.m */; };
+		9A637DE61CA44279004D17BA /* RedirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DE41CA44279004D17BA /* RedirectViewController.m */; };
+		9A637DE71CA44279004D17BA /* RedirectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DE51CA44279004D17BA /* RedirectViewController.xib */; };
 		9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0111C9ED3E100AD2FC1 /* main.m */; };
 		9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0141C9ED3E100AD2FC1 /* AppDelegate.m */; };
 		9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1C01C1C9ED3E100AD2FC1 /* Assets.xcassets */; };
@@ -80,6 +83,12 @@
 		9A637DD11CA2E580004D17BA /* RecommendTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendTypeCell.h; sourceTree = "<group>"; };
 		9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendTypeCell.m; sourceTree = "<group>"; };
 		9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTypeCell.xib; sourceTree = "<group>"; };
+		9A637DD61CA41A9C004D17BA /* HomePageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageData.h; sourceTree = "<group>"; };
+		9A637DD71CA41A9C004D17BA /* HomePageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageData.m; sourceTree = "<group>"; };
+		9A637DE01CA423CF004D17BA /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		9A637DE31CA44279004D17BA /* RedirectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedirectViewController.h; sourceTree = "<group>"; };
+		9A637DE41CA44279004D17BA /* RedirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedirectViewController.m; sourceTree = "<group>"; };
+		9A637DE51CA44279004D17BA /* RedirectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedirectViewController.xib; sourceTree = "<group>"; };
 		9AF1C00D1C9ED3E100AD2FC1 /* youqinghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youqinghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1C0111C9ED3E100AD2FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,6 +148,9 @@
 				9A637DAF1CA17FF2004D17BA /* TourismType.m */,
 				9A637DB11CA1809B004D17BA /* Banner.h */,
 				9A637DB21CA1809B004D17BA /* Banner.m */,
+				9A637DD61CA41A9C004D17BA /* HomePageData.h */,
+				9A637DD71CA41A9C004D17BA /* HomePageData.m */,
+				9A637DE01CA423CF004D17BA /* DataModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +238,9 @@
 			children = (
 				9A637DBB1CA18711004D17BA /* MainViewController.h */,
 				9A637DBC1CA18711004D17BA /* MainViewController.m */,
+				9A637DE31CA44279004D17BA /* RedirectViewController.h */,
+				9A637DE41CA44279004D17BA /* RedirectViewController.m */,
+				9A637DE51CA44279004D17BA /* RedirectViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,6 +369,7 @@
 				9AF1C0201C9ED3E100AD2FC1 /* LaunchScreen.storyboard in Resources */,
 				9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */,
 				9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */,
+				9A637DE71CA44279004D17BA /* RedirectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +433,7 @@
 				9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */,
 				9A637DB31CA1809B004D17BA /* Banner.m in Sources */,
 				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
+				9A637DD81CA41A9C004D17BA /* HomePageData.m in Sources */,
 				9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */,
 				9A1FEB441C9EEA120067B8D5 /* ResponseBaseData.m in Sources */,
 				9A1FEB401C9EE4D20067B8D5 /* RequestBaseAPI.m in Sources */,
@@ -424,6 +441,7 @@
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
 				9A637DB01CA17FF2004D17BA /* TourismType.m in Sources */,
 				9A637DCE1CA2DBEE004D17BA /* TourismTypeItemCell.m in Sources */,
+				9A637DE61CA44279004D17BA /* RedirectViewController.m in Sources */,
 				9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */,
 				9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */,
 				9A637DC11CA18993004D17BA /* TempViewController.m in Sources */,

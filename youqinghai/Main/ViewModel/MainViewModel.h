@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DataModel.h"
 
 @interface MainViewModel : NSObject
 
 @property (nonatomic, assign) NSInteger mark; // mark 传入  分页时候传入 1
+
+// 主页的数据
+@property (nonatomic, strong) HomePageData *homePageData;
 
 /**
  *  @brief 获取首页数据

@@ -10,4 +10,9 @@
 
 @implementation TourismType
 
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"Id":@"id",
+             @"typeName":@"typename"};
+}
+
 @end

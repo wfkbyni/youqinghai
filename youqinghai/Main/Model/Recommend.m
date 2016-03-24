@@ -10,4 +10,9 @@
 
 @implementation Recommend
 
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+ 
+    return @{@"Id":@"id"};
+}
+
 @end
