@@ -65,12 +65,16 @@
 - (void)requestBindData{
     self.mainViewModel = [[MainViewModel alloc] init];
 
-    [[self.mainViewModel getHomePageData] subscribeNext:^(HomePageData *hoemPageData) {
+    [[self.mainViewModel getHomePageData]  subscribeError:^(NSError *error) {
         
+    } completed:^{
+        
+    }];
+    
+    [RACObserve(self.mainViewModel, homePageData) subscribeNext:^(id x) {
         [_myTableView setTableHeaderView:[self tableViewHeaderView]];
         
         [self.myTableView reloadData];
-        
     }];
     
 }
@@ -175,12 +179,17 @@
     if (indexPath.section == 0) {
         TourismTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:tourismTypeCell forIndexPath:indexPath];
         cell.tourismTypes = self.mainViewModel.homePageData.tourismType;
+        cell.navigationController = self.navigationController;
         return cell;
     }else{
         RecommendTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTypeCell forIndexPath:indexPath];
         cell.recommend = self.mainViewModel.homePageData.recommend[indexPath.row];
         return cell;
     }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 @end

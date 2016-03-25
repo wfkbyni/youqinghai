@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbL-Xn-jC2">
-                        <rect key="frame" x="10" y="0.0" width="300" height="149.5"/>
+                        <rect key="frame" x="10" y="5" width="300" height="144.5"/>
                         <color key="backgroundColor" red="0.98823535439999999" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
                         <state key="normal">
                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-vb-d9C">
-                        <rect key="frame" x="232" y="10" width="70" height="30"/>
+                        <rect key="frame" x="232" y="15" width="70" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTr-p7-fCQ">
                                 <rect key="frame" x="17.5" y="6.5" width="35.5" height="17"/>
@@ -64,7 +64,7 @@
                     <constraint firstItem="gfT-vb-d9C" firstAttribute="trailing" secondItem="dbL-Xn-jC2" secondAttribute="trailing" constant="-8" id="dcb-5R-aIl"/>
                     <constraint firstItem="dbL-Xn-jC2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eF8-ZT-Me6"/>
                     <constraint firstItem="tsW-1h-VQ9" firstAttribute="leading" secondItem="dbL-Xn-jC2" secondAttribute="leading" constant="10" id="hkQ-CQ-Pf5"/>
-                    <constraint firstItem="dbL-Xn-jC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oW7-Ic-pEK"/>
+                    <constraint firstItem="dbL-Xn-jC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="oW7-Ic-pEK"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>

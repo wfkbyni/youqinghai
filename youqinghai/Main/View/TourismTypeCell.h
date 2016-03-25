@@ -11,5 +11,6 @@
 @interface TourismTypeCell : UITableViewCell
 
 @property (nonatomic, strong) NSArray *tourismTypes;
+@property (nonatomic, strong) UINavigationController *navigationController;
 
 @end

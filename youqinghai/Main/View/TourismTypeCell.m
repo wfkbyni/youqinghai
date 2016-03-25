@@ -9,6 +9,8 @@
 #import "TourismTypeCell.h"
 #import "TourismTypeItemCell.h"
 
+#import "TouristroutesViewController.h"
+
 @interface TourismTypeCell()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
@@ -59,8 +61,18 @@
     return cell;
 }
 
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    TourismType *tourismType = self.tourismTypes[indexPath.row];
+    
+    TouristroutesViewController *controller = [[TouristroutesViewController alloc] init];
+    controller.tourismType = tourismType;
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{

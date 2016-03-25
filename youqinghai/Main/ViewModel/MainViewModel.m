@@ -33,4 +33,17 @@
     return signal;
 }
 
+-(RACSignal *)getTouristroutesList{
+    
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTouristroutesListWithTypeId:self.typeId wihtPageIndex:1 withPageSize:20] map:^id(id value) {
+        
+        self.recommends = [Recommend mj_objectArrayWithKeyValuesArray:value];
+        
+        return self.recommends;
+    }];
+    
+    return signal;
+}
+
+
 @end

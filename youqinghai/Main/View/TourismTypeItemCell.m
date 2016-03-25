@@ -18,6 +18,7 @@
 
 -(void)awakeFromNib{
     [self viewWithCornerRadius:5];
+    self.typeImgUrlBtn.userInteractionEnabled = NO;
 }
 
 -(void)setTourismType:(TourismType *)tourismType{

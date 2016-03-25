@@ -18,6 +18,39 @@
  *  @param pageSize  页大小
  *
  */
-- (RACSignal *)getHomePageDataWithMark:(NSInteger)mark withPageIndex:(NSInteger)pageIndex withPageSize:(NSInteger)pageSize;
+- (RACSignal *)getHomePageDataWithMark:(NSInteger)mark
+                         withPageIndex:(NSInteger)pageIndex
+                          withPageSize:(NSInteger)pageSize;
+
+/**
+ *  @brief 获取该类型的旅游线路（1.0）
+ *
+ *  @param typeId    线路类型Id
+ *  @param pageIndex <#pageIndex description#>
+ *  @param pageSize  <#pageSize description#>
+ *
+ */
+- (RACSignal *)getTouristroutesListWithTypeId:(NSInteger)typeId
+                                wihtPageIndex:(NSInteger)pageIndex
+                                 withPageSize:(NSInteger)pageSize;
+
+/**
+ *  @brief 获线路行程介绍（1.0）
+ *
+ *  @param tourisId 线路类型Id
+ *  @param userId   用户Id
+ *
+ */
+- (RACSignal *)getTourisDetailsWithTourisId:(NSInteger)tourisId withUserId:(NSInteger)userId;
+
+/**
+ *  @brief 获取该线路的评价（1.0）
+ *
+ *  @param tourisId  线路Id
+ *  @param pageIndex 页码
+ *  @param pageSize  页大小
+ *
+ */
+- (RACSignal *)getTourisEvaluateWithTourisId:(NSInteger)tourisId withPageIndex:(NSInteger)pageIndex withPageSize:(NSInteger)pageSize;
 
 @end

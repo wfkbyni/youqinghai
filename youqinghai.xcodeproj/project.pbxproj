@@ -32,6 +32,10 @@
 		9A637DD81CA41A9C004D17BA /* HomePageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DD71CA41A9C004D17BA /* HomePageData.m */; };
 		9A637DE61CA44279004D17BA /* RedirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DE41CA44279004D17BA /* RedirectViewController.m */; };
 		9A637DE71CA44279004D17BA /* RedirectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DE51CA44279004D17BA /* RedirectViewController.xib */; };
+		9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DEC1CA58846004D17BA /* TouristroutesViewController.m */; };
+		9A637DEF1CA58846004D17BA /* TouristroutesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DED1CA58846004D17BA /* TouristroutesViewController.xib */; };
+		9A637DF41CA59584004D17BA /* TourismDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DF21CA59584004D17BA /* TourismDetailController.m */; };
+		9A637DF51CA59584004D17BA /* TourismDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DF31CA59584004D17BA /* TourismDetailController.xib */; };
 		9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0111C9ED3E100AD2FC1 /* main.m */; };
 		9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0141C9ED3E100AD2FC1 /* AppDelegate.m */; };
 		9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1C01C1C9ED3E100AD2FC1 /* Assets.xcassets */; };
@@ -89,6 +93,12 @@
 		9A637DE31CA44279004D17BA /* RedirectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedirectViewController.h; sourceTree = "<group>"; };
 		9A637DE41CA44279004D17BA /* RedirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedirectViewController.m; sourceTree = "<group>"; };
 		9A637DE51CA44279004D17BA /* RedirectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedirectViewController.xib; sourceTree = "<group>"; };
+		9A637DEB1CA58846004D17BA /* TouristroutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristroutesViewController.h; sourceTree = "<group>"; };
+		9A637DEC1CA58846004D17BA /* TouristroutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristroutesViewController.m; sourceTree = "<group>"; };
+		9A637DED1CA58846004D17BA /* TouristroutesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouristroutesViewController.xib; sourceTree = "<group>"; };
+		9A637DF11CA59584004D17BA /* TourismDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismDetailController.h; sourceTree = "<group>"; };
+		9A637DF21CA59584004D17BA /* TourismDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismDetailController.m; sourceTree = "<group>"; };
+		9A637DF31CA59584004D17BA /* TourismDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TourismDetailController.xib; sourceTree = "<group>"; };
 		9AF1C00D1C9ED3E100AD2FC1 /* youqinghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youqinghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1C0111C9ED3E100AD2FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -236,11 +246,10 @@
 		9A637DBA1CA186EE004D17BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A637DBB1CA18711004D17BA /* MainViewController.h */,
-				9A637DBC1CA18711004D17BA /* MainViewController.m */,
-				9A637DE31CA44279004D17BA /* RedirectViewController.h */,
-				9A637DE41CA44279004D17BA /* RedirectViewController.m */,
-				9A637DE51CA44279004D17BA /* RedirectViewController.xib */,
+				9A637DF01CA59570004D17BA /* TourismDetailController */,
+				9A637DEA1CA58826004D17BA /* TouristroutesViewController */,
+				9A637DE81CA58807004D17BA /* MainViewController */,
+				9A637DE91CA58819004D17BA /* RedircetViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +261,45 @@
 				9A637DCA1CA2D8AC004D17BA /* UIView+Helper.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9A637DE81CA58807004D17BA /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9A637DBB1CA18711004D17BA /* MainViewController.h */,
+				9A637DBC1CA18711004D17BA /* MainViewController.m */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		9A637DE91CA58819004D17BA /* RedircetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9A637DE31CA44279004D17BA /* RedirectViewController.h */,
+				9A637DE41CA44279004D17BA /* RedirectViewController.m */,
+				9A637DE51CA44279004D17BA /* RedirectViewController.xib */,
+			);
+			name = RedircetViewController;
+			sourceTree = "<group>";
+		};
+		9A637DEA1CA58826004D17BA /* TouristroutesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9A637DEB1CA58846004D17BA /* TouristroutesViewController.h */,
+				9A637DEC1CA58846004D17BA /* TouristroutesViewController.m */,
+				9A637DED1CA58846004D17BA /* TouristroutesViewController.xib */,
+			);
+			name = TouristroutesViewController;
+			sourceTree = "<group>";
+		};
+		9A637DF01CA59570004D17BA /* TourismDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				9A637DF11CA59584004D17BA /* TourismDetailController.h */,
+				9A637DF21CA59584004D17BA /* TourismDetailController.m */,
+				9A637DF31CA59584004D17BA /* TourismDetailController.xib */,
+			);
+			name = TourismDetailController;
 			sourceTree = "<group>";
 		};
 		9AF1C0041C9ED3E100AD2FC1 = {
@@ -363,9 +411,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A637DF51CA59584004D17BA /* TourismDetailController.xib in Resources */,
 				9A637DC21CA18993004D17BA /* TempViewController.xib in Resources */,
 				9A637DD01CA2DBFF004D17BA /* TourismTypeItemCell.xib in Resources */,
 				9A637DC71CA2D7D6004D17BA /* TourismTypeCell.xib in Resources */,
+				9A637DEF1CA58846004D17BA /* TouristroutesViewController.xib in Resources */,
 				9AF1C0201C9ED3E100AD2FC1 /* LaunchScreen.storyboard in Resources */,
 				9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */,
 				9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */,
@@ -431,6 +481,7 @@
 				9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */,
 				9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */,
 				9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */,
+				9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */,
 				9A637DB31CA1809B004D17BA /* Banner.m in Sources */,
 				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
 				9A637DD81CA41A9C004D17BA /* HomePageData.m in Sources */,
@@ -444,6 +495,7 @@
 				9A637DE61CA44279004D17BA /* RedirectViewController.m in Sources */,
 				9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */,
 				9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */,
+				9A637DF41CA59584004D17BA /* TourismDetailController.m in Sources */,
 				9A637DC11CA18993004D17BA /* TempViewController.m in Sources */,
 				9A637DCB1CA2D8AC004D17BA /* UIView+Helper.m in Sources */,
 				9A1FEB3B1C9EE1770067B8D5 /* BaseViewController.m in Sources */,
