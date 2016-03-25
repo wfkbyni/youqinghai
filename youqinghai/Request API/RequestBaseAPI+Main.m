@@ -1,3 +1,4 @@
+
 //
 //  RequestBaseAPI+Main.m
 //  youqinghai
@@ -42,8 +43,6 @@ NSString *const getTourisEvaluate = @"app/touristroutes/getTourisEvaluate";
     
     NSString *params = [NSString stringWithFormat:@"server=%@&typeId=%ld&pageIndex=%ld&pageSize=%ld",getTouristroutesList,typeId,pageIndex,pageSize];
     
-    params = [GTMBase64 desEncrypt:params];
-    
     return [self requestWithType:RequestAPITypePost
                           params:[self getDesEncryptWithString:params]];
 }
@@ -67,4 +66,3 @@ NSString *const getTourisEvaluate = @"app/touristroutes/getTourisEvaluate";
                           params:[self getDesEncryptWithString:params]];
 }
 @end
-
