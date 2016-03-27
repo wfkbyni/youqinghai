@@ -81,7 +81,7 @@
 
 - (UIView *)tableViewHeaderView{
     
-    SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.width * 0.65) delegate:nil placeholderImage:nil];
+    SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.width * 0.5) delegate:nil placeholderImage:nil];
     
     NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:[self.mainViewModel.homePageData.banner count]];
     NSMutableArray *titleArray = [[NSMutableArray alloc] initWithCapacity:[self.mainViewModel.homePageData.banner count]];
@@ -183,6 +183,7 @@
         return cell;
     }else{
         RecommendTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTypeCell forIndexPath:indexPath];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         cell.recommend = self.mainViewModel.homePageData.recommend[indexPath.row];
         return cell;
     }

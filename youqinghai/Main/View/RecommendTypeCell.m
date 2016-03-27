@@ -29,6 +29,8 @@
     [self.introduceLab setTextColor:color];
     [self.partakeLab setTextColor:color];
     
+    self.imgUrlBtn.userInteractionEnabled = NO;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

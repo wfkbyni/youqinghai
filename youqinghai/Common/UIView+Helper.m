@@ -10,8 +10,14 @@
 
 @implementation UIView (Helper)
 
--(void)viewWithCornerRadius:(int)cornerRadius{
+-(void)viewWithCornerRadius:(NSInteger)cornerRadius{
     self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = YES;
+}
+
+-(void)viewWithBorderWidth:(NSInteger)borderWidth WithBorderColor:(UIColor *)borderColor{
+    self.layer.borderColor = [borderColor CGColor];
+    self.layer.borderWidth = borderWidth;
     self.layer.masksToBounds = YES;
 }
 @end

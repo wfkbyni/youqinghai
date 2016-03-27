@@ -7,7 +7,6 @@
 //
 
 #import "ResponseBaseData.h"
-#import "DataModel.h"
 
 @interface HomePageData : ResponseBaseData
 

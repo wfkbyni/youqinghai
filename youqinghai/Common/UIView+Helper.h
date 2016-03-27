@@ -15,6 +15,14 @@
  *
  *  @param cornerRadius <#cornerRadius description#>
  */
-- (void)viewWithCornerRadius:(int)cornerRadius;
+- (void)viewWithCornerRadius:(NSInteger)cornerRadius;
+
+/**
+ *  @brief 设置view边框
+ *
+ *  @param border      <#border description#>
+ *  @param borderColor <#borderColor description#>
+ */
+- (void)viewWithBorderWidth:(NSInteger)borderWidth WithBorderColor:(UIColor *)borderColor;
 
 @end

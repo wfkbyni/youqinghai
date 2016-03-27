@@ -10,4 +10,6 @@
 
 @interface TourismDetailController : UIViewController
 
+@property (nonatomic, strong)Recommend *recommend;
+
 @end

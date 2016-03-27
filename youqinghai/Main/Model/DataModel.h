@@ -10,3 +10,5 @@
 #import "TourismType.h"
 #import "Banner.h"
 #import "HomePageData.h"
+#import "Traveltrip.h"
+#import "Trip.h"

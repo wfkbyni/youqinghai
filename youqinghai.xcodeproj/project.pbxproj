@@ -36,6 +36,10 @@
 		9A637DEF1CA58846004D17BA /* TouristroutesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DED1CA58846004D17BA /* TouristroutesViewController.xib */; };
 		9A637DF41CA59584004D17BA /* TourismDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DF21CA59584004D17BA /* TourismDetailController.m */; };
 		9A637DF51CA59584004D17BA /* TourismDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DF31CA59584004D17BA /* TourismDetailController.xib */; };
+		9A637DF81CA626C2004D17BA /* CustomMoveItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DF71CA626C2004D17BA /* CustomMoveItemView.m */; };
+		9A637DFB1CA6337E004D17BA /* Traveltrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DFA1CA6337E004D17BA /* Traveltrip.m */; };
+		9A637DFE1CA635FF004D17BA /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DFD1CA635FF004D17BA /* Trip.m */; };
+		9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637E031CA6F00C004D17BA /* TourismDetailView.m */; };
 		9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0111C9ED3E100AD2FC1 /* main.m */; };
 		9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0141C9ED3E100AD2FC1 /* AppDelegate.m */; };
 		9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1C01C1C9ED3E100AD2FC1 /* Assets.xcassets */; };
@@ -99,6 +103,14 @@
 		9A637DF11CA59584004D17BA /* TourismDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismDetailController.h; sourceTree = "<group>"; };
 		9A637DF21CA59584004D17BA /* TourismDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismDetailController.m; sourceTree = "<group>"; };
 		9A637DF31CA59584004D17BA /* TourismDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TourismDetailController.xib; sourceTree = "<group>"; };
+		9A637DF61CA626C2004D17BA /* CustomMoveItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMoveItemView.h; sourceTree = "<group>"; };
+		9A637DF71CA626C2004D17BA /* CustomMoveItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMoveItemView.m; sourceTree = "<group>"; };
+		9A637DF91CA6337E004D17BA /* Traveltrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Traveltrip.h; sourceTree = "<group>"; };
+		9A637DFA1CA6337E004D17BA /* Traveltrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Traveltrip.m; sourceTree = "<group>"; };
+		9A637DFC1CA635FF004D17BA /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		9A637DFD1CA635FF004D17BA /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		9A637E021CA6F00C004D17BA /* TourismDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismDetailView.h; sourceTree = "<group>"; };
+		9A637E031CA6F00C004D17BA /* TourismDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismDetailView.m; sourceTree = "<group>"; };
 		9AF1C00D1C9ED3E100AD2FC1 /* youqinghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youqinghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1C0111C9ED3E100AD2FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +164,7 @@
 		9A1FEB351C9EE1470067B8D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9A637DE01CA423CF004D17BA /* DataModel.h */,
 				9A637DAB1CA17EFE004D17BA /* Recommend.h */,
 				9A637DAC1CA17EFE004D17BA /* Recommend.m */,
 				9A637DAE1CA17FF2004D17BA /* TourismType.h */,
@@ -160,7 +173,10 @@
 				9A637DB21CA1809B004D17BA /* Banner.m */,
 				9A637DD61CA41A9C004D17BA /* HomePageData.h */,
 				9A637DD71CA41A9C004D17BA /* HomePageData.m */,
-				9A637DE01CA423CF004D17BA /* DataModel.h */,
+				9A637DF91CA6337E004D17BA /* Traveltrip.h */,
+				9A637DFA1CA6337E004D17BA /* Traveltrip.m */,
+				9A637DFC1CA635FF004D17BA /* Trip.h */,
+				9A637DFD1CA635FF004D17BA /* Trip.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +193,10 @@
 				9A637DD11CA2E580004D17BA /* RecommendTypeCell.h */,
 				9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */,
 				9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */,
+				9A637DF61CA626C2004D17BA /* CustomMoveItemView.h */,
+				9A637DF71CA626C2004D17BA /* CustomMoveItemView.m */,
+				9A637E021CA6F00C004D17BA /* TourismDetailView.h */,
+				9A637E031CA6F00C004D17BA /* TourismDetailView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -478,9 +498,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A637DFE1CA635FF004D17BA /* Trip.m in Sources */,
 				9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */,
 				9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */,
 				9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */,
+				9A637DF81CA626C2004D17BA /* CustomMoveItemView.m in Sources */,
 				9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */,
 				9A637DB31CA1809B004D17BA /* Banner.m in Sources */,
 				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
@@ -489,6 +511,8 @@
 				9A1FEB441C9EEA120067B8D5 /* ResponseBaseData.m in Sources */,
 				9A1FEB401C9EE4D20067B8D5 /* RequestBaseAPI.m in Sources */,
 				9A637DAD1CA17EFE004D17BA /* Recommend.m in Sources */,
+				9A637DFB1CA6337E004D17BA /* Traveltrip.m in Sources */,
+				9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
 				9A637DB01CA17FF2004D17BA /* TourismType.m in Sources */,
 				9A637DCE1CA2DBEE004D17BA /* TourismTypeItemCell.m in Sources */,

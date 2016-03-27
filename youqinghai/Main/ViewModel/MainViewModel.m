@@ -11,6 +11,8 @@
 
 #import "HomePageData.h"
 
+#define userId 4
+
 @implementation MainViewModel
 
 -(instancetype)init{
@@ -40,6 +42,18 @@
         self.recommends = [Recommend mj_objectArrayWithKeyValuesArray:value];
         
         return self.recommends;
+    }];
+    
+    return signal;
+}
+
+-(RACSignal *)getTourisDetails{
+    
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTourisDetailsWithTourisId:self.typeId withUserId:userId] map:^id(id value) {
+       
+        self.traveltrip = [Traveltrip mj_objectWithKeyValues:value];
+        
+        return self.traveltrip;
     }];
     
     return signal;

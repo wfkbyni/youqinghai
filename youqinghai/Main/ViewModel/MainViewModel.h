@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataModel.h"
 
 @interface MainViewModel : NSObject
 
 @property (nonatomic, assign) NSInteger mark;       // mark 传入  分页时候传入 1
 @property (nonatomic, assign) NSInteger typeId;     // 线路类型Id
+@property (nonatomic, strong) Traveltrip *traveltrip;
 
 // 主页的数据
 @property (nonatomic, strong) HomePageData *homePageData;
@@ -31,4 +31,10 @@
  *
  */
 - (RACSignal *)getTouristroutesList;
+
+/**
+ *  @brief 获线路行程介绍（1.0）
+ *
+ */
+- (RACSignal *)getTourisDetails;
 @end

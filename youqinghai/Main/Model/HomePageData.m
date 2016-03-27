@@ -12,9 +12,9 @@
 
 +(NSDictionary *)mj_objectClassInArray{
     
-    return @{@"recommend":@"Recommend",
-             @"tourismType":@"TourismType",
-             @"banner":@"Banner"};
+    return @{@"recommend" : @"Recommend",
+             @"tourismType" : @"TourismType",
+             @"banner" : @"Banner"};
 }
 
 @end

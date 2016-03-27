@@ -7,6 +7,8 @@
 //
 
 #import "TouristroutesViewController.h"
+#import "TourismDetailController.h"
+
 #import "MainViewModel.h"
 
 #import "RecommendTypeCell.h"
@@ -65,11 +67,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     RecommendTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTypeCell forIndexPath:indexPath];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     cell.recommend = self.mainViewModel.recommends[indexPath.row];
     return cell;
-    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TourismDetailController *controller = [[TourismDetailController alloc] init];
+    controller.recommend = self.mainViewModel.recommends[indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
