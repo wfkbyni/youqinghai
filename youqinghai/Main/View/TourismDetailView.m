@@ -31,7 +31,6 @@
     [bgView setAlpha:0.5];
     [self addSubview:bgView];
     
-    
     __block float y = line;
     [_viewlist enumerateObjectsUsingBlock:^(Traveltrip *traveltrip, NSUInteger idx, BOOL * _Nonnull stop) {
         

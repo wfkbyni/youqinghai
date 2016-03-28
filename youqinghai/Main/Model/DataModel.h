@@ -12,3 +12,4 @@
 #import "HomePageData.h"
 #import "Traveltrip.h"
 #import "Trip.h"
+#import "TourisEvaluate.h"

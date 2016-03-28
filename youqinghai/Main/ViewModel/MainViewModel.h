@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) NSInteger mark;       // mark 传入  分页时候传入 1
 @property (nonatomic, assign) NSInteger typeId;     // 线路类型Id
+@property (nonatomic, assign) NSInteger tourisId;   // 线路id
 @property (nonatomic, strong) Traveltrip *traveltrip;
 
 // 主页的数据
@@ -19,6 +20,9 @@
 
 // 推荐线路
 @property (nonatomic, strong) NSArray *recommends;
+
+// 评论列表
+@property (nonatomic, strong) NSArray *tourisEvaluate;
 
 /**
  *  @brief 获取首页数据
@@ -37,4 +41,10 @@
  *
  */
 - (RACSignal *)getTourisDetails;
+
+/**
+ *  @brief 获取该线路的评价（1.0）
+ *
+ */
+- (RACSignal *)getTourisEvaluate;
 @end

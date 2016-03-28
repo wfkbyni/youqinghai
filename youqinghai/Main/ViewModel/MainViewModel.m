@@ -12,6 +12,7 @@
 #import "HomePageData.h"
 
 #define userId 4
+#define pageSize 20
 
 @implementation MainViewModel
 
@@ -24,7 +25,7 @@
 
 -(RACSignal *)getHomePageData{
     
-    RACSignal *signal = [[[RequestBaseAPI standardAPI] getHomePageDataWithMark:self.mark withPageIndex:1 withPageSize:20]
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getHomePageDataWithMark:self.mark withPageIndex:1 withPageSize:pageSize]
                          map:^id(id value) {
         
         self.homePageData = [HomePageData mj_objectWithKeyValues:value];
@@ -37,7 +38,7 @@
 
 -(RACSignal *)getTouristroutesList{
     
-    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTouristroutesListWithTypeId:self.typeId wihtPageIndex:1 withPageSize:20] map:^id(id value) {
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTouristroutesListWithTypeId:self.typeId wihtPageIndex:1 withPageSize:pageSize] map:^id(id value) {
         
         self.recommends = [Recommend mj_objectArrayWithKeyValuesArray:value];
         
@@ -54,6 +55,18 @@
         self.traveltrip = [Traveltrip mj_objectWithKeyValues:value];
         
         return self.traveltrip;
+    }];
+    
+    return signal;
+}
+
+-(RACSignal *)getTourisEvaluate{
+    
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTourisEvaluateWithTourisId:self.tourisId withPageIndex:1 withPageSize:pageSize] map:^id(id value) {
+        
+        self.tourisEvaluate = [TourisEvaluate mj_objectArrayWithKeyValuesArray:value];
+        
+        return self.tourisEvaluate;
     }];
     
     return signal;

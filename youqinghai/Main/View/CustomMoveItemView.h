@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, TourismDetailType) {
+    TourismDetailTypeWithIntroduction,  // 行程介绍
+    TourismDetailTypeWithEvaluate,      // 线路评价
+    TourismDetailTypeWithService        // 服务介绍
+};
+
 @interface CustomMoveItemView : UIView
 
 /**
@@ -20,6 +26,6 @@
  */
 -(instancetype)initWithFrame:(CGRect)frame withItems:(NSArray *)items;
 
-@property (nonatomic, copy) void(^CustoMoveItemBlock)(NSInteger);
+@property (nonatomic, copy) void(^CustoMoveItemBlock)(TourismDetailType);
 
 @end
