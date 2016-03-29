@@ -39,6 +39,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.recommend.title;
+    
     self.mainViewModel = [[MainViewModel alloc] init];
     
     [self loadDataWithDataType:TourismDetailTypeWithIntroduction];
