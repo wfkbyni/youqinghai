@@ -10,39 +10,65 @@
 
 #import "TourismTypeItemCell.h"
 
-@interface TourisEvaluateCell()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface TourisEvaluateCell()
 
-@property (weak, nonatomic) IBOutlet UIImageView *userImgView;
-@property (weak, nonatomic) IBOutlet UILabel *userNameLab;
-@property (weak, nonatomic) IBOutlet UILabel *evatTimeLab;
-@property (weak, nonatomic) IBOutlet UILabel *contentLab;
-
-@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (strong, nonatomic) UIImageView *userImgView;
+@property (strong, nonatomic) UILabel *userNameLab;
+@property (strong, nonatomic) UILabel *evatTimeLab;
+@property (strong, nonatomic) UILabel *contentLab;
 
 @property (nonatomic, strong) NSArray *listImages;
+
+@property (nonatomic, strong) NSMutableArray *imageViewArray;
 
 @end
 
 #define identifier @"collectionViewCell"
+#define leftWidth 60
+#define picWidth ((kScreenSize.width - leftWidth) - 4 * 10) / 3
 
 @implementation TourisEvaluateCell
 
-- (void)awakeFromNib {
-    // Initialization code
-    [self.myCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TourismTypeItemCell class]) bundle:nil] forCellWithReuseIdentifier:identifier];
-    
-    self.myCollectionView.dataSource = self;
-    self.myCollectionView.delegate = self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        // 头像
+        _userImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 48, 48)];
+        [_userImgView viewWithCornerRadius:CGRectGetWidth(_userImgView.frame) / 2];
+        
+        // 名字
+        _userNameLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_userImgView.frame) + 10, 10, 100, 21)];
+        [_userNameLab setFont:[UIFont systemFontOfSize:15.0f]];
+        
+        // 时间
+        _evatTimeLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_userNameLab.frame), 10, kScreenSize.width - 10, 21)];
+        [_evatTimeLab setFont:[UIFont systemFontOfSize:15.0f]];
+        
+        // 内容
+        _contentLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_userImgView.frame) + 10, CGRectGetMaxY(_userNameLab.frame) + 10, kScreenSize.width - 60 - 10, 0)];
+        [_contentLab setNumberOfLines:0];
+        [_contentLab setFont:[UIFont systemFontOfSize:14.0f]];
+        
+        [self.contentView addSubview:_userImgView];
+        [self.contentView addSubview:_userNameLab];
+        [self.contentView addSubview:_evatTimeLab];
+        [self.contentView addSubview:_contentLab];
+        
+        _imageViewArray = [[NSMutableArray alloc] initWithCapacity:6];
+        // 添加图片
+        for (NSInteger i = 0; i < 6; i++) {
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+            imageView.tag = 100 + i;
+            imageView.hidden = YES;
+            [self.contentView addSubview:imageView];
+            
+            [_imageViewArray addObject:imageView];
+        }
+        
+    }
+    return self;
 }
 
 -(void)setTourisEvaluate:(TourisEvaluate *)tourisEvaluate{
-    [self.userImgView viewWithCornerRadius:CGRectGetWidth(self.userImgView.frame) / 2];
     [self.userImgView sd_setImageWithURL:[NSURL URLWithString:tourisEvaluate.userImgUrl]];
     [self.userNameLab setText:tourisEvaluate.userName];
     [self.contentLab setText:tourisEvaluate.content];
@@ -54,51 +80,83 @@
     
     [self.evatTimeLab setText:time];
     
+    CGRect frame = self.contentLab.frame;
+    frame.size.height = [tourisEvaluate.content calHeightWithWidth:kScreenSize.width - leftWidth withFontSize:14.0f];
+    self.contentLab.frame = frame;
+    
     _listImages = tourisEvaluate.listImage;
-    [self.myCollectionView reloadData];
-}
-
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    TourismTypeItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    for (NSInteger i = _listImages.count; i < _imageViewArray.count; i++) {
+        UIImageView *imageView = _imageViewArray[i];
+        imageView.hidden = YES;
+    }
     
-    cell.tourismType = self.listImages[indexPath.row];
-    [cell.contentView setBackgroundColor:[UIColor clearColor]];
+    if (_listImages.count == 0) {
+        return;
+    }
     
-    cell.layer.borderColor = [UIColor colorWithRed:arc4random_uniform(255.0f) / 255.0f green:arc4random_uniform(255.0f) / 255.0f blue:arc4random_uniform(255.0f) / 255.0f alpha:1].CGColor;
-    cell.layer.masksToBounds = YES;
+    [_listImages enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSInteger columnIndex = idx % 3;
+        NSInteger rowIndex = idx / 3;
+        
+        UIImageView *imageView = _imageViewArray[idx];
+        imageView.hidden = NO;
+        
+        CGRect frame = CGRectMake(columnIndex * (picWidth + 10) + CGRectGetMaxX(_userImgView.frame) + 10 , rowIndex * (picWidth + 10) + CGRectGetMaxY(_contentLab.frame) + 10, picWidth, picWidth);
+        imageView.frame = frame;
+        
+        NSString *imgUrl = obj[@"imgUrl"];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"collection_off"]];
+    }];
     
-    return cell;
+    [self layoutIfNeeded];
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    return YES;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+/**
+ *  @brief 计算图片的高度
+ *
+ *  @param picsData <#picsData description#>
+ *
+ *  @return <#return value description#>
+ */
++ (CGFloat)calPicHeightWithPicsData:(NSArray *)picsData{
     
+    CGFloat height = 0;
     
+    if (picsData.count > 0) {
+        height += 10;   // 图片到内容距离
+        
+        if (picsData.count <= 3) {
+            height += picWidth;
+        }else{
+            height += picWidth * 2 + 10;
+        }
+    }
+    
+    return height;
 }
 
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
-    return 10;
-}
-
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-    return 10;
-}
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(10, 10, 10, 10);
-}
-
-
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(100, 100);
+/**
+ *  @brief 计算row的高度
+ *
+ *  @param tourisEvaluate <#tourisEvaluate description#>
+ *
+ *  @return <#return value description#>
+ */
++ (CGFloat)cellWithRowHeight:(TourisEvaluate *)tourisEvaluate{
+    
+    CGFloat height = 10;    // 名字到上边距的距离
+    
+    height += 21; // 名字的高度
+    
+    height += 10; // 内容距离名字的高度
+    
+    height += [tourisEvaluate.content calHeightWithWidth:kScreenSize.width - leftWidth withFontSize:14.0f]; // 内容的高度
+    height += [self calPicHeightWithPicsData:tourisEvaluate.listImage];    // 图片的高度
+    
+    height += 10;   // 图片到底边的距离
+    
+    return height;
 }
 
 @end

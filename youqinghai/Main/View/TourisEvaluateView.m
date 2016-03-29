@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) NSArray *tourisEvaluates;
 
+@property (nonatomic, strong) NSMutableDictionary *cacheRowHeight;
+
 @end
 
 #define cellIdeitifier @"TourisEvaluateCell"
@@ -31,7 +33,7 @@
         
         [self addSubview:_myTableView];
         
-        [_myTableView registerNib:[UINib nibWithNibName:@"TourisEvaluateCell" bundle:nil] forCellReuseIdentifier:cellIdeitifier];
+        [_myTableView registerClass:[TourisEvaluateCell class] forCellReuseIdentifier:cellIdeitifier];
         
         [self.myTableView setEstimatedRowHeight:100];
     }
@@ -42,6 +44,7 @@
 - (void)setTourisEvaluate:(NSArray *)tourisEvaluate{
     _tourisEvaluates = tourisEvaluate;
     
+    _cacheRowHeight = [NSMutableDictionary new];
     [self.myTableView reloadData];
 }
 
@@ -50,9 +53,26 @@
     return _tourisEvaluates.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSString *key = [NSString stringWithFormat:@"row%ld",indexPath.row];
+    
+    CGFloat height = [TourisEvaluateCell cellWithRowHeight:_tourisEvaluates[indexPath.row]];
+    
+    if (height == 0) {
+        [_cacheRowHeight setObject:@(height) forKey:key];
+    }
+    
+    return height;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    TourisEvaluateCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdeitifier forIndexPath:indexPath];
+    TourisEvaluateCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdeitifier];
+    
+    if (cell == nil) {
+        cell = [[TourisEvaluateCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdeitifier];
+    }
     
     cell.tourisEvaluate = _tourisEvaluates[indexPath.row];
     

@@ -8,7 +8,9 @@
 
 #import "CustomMoveItemView.h"
 
-@interface CustomMoveItemView()
+@interface CustomMoveItemView(){
+    NSInteger oldSelectIndex;
+}
 // 显示的项
 @property (nonatomic, strong) NSArray *showItems;
 @end
@@ -32,7 +34,7 @@
             lab.textAlignment = NSTextAlignmentCenter;
             lab.userInteractionEnabled = YES;
             
-            UIView *vLine = [[UIView alloc] initWithFrame:CGRectMake(i * width + 1, 10, 1, CGRectGetHeight(frame) - 20)];
+            UIView *vLine = [[UIView alloc] initWithFrame:CGRectMake((i + 1) * width + 1, 10, 1, CGRectGetHeight(frame) - 20)];
             [vLine setBackgroundColor:[UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.00]];
             
             if (i == 0) {
@@ -52,9 +54,11 @@
             
             UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTouchAction:)];
             [lab addGestureRecognizer:gesture];
-            
-            
         }
+        
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame) - 1, CGRectGetWidth(frame), 1)];
+        [line setBackgroundColor:[UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.00]];
+        [self addSubview:line];
     }
     return self;
 }
@@ -89,7 +93,14 @@
         
         changeSelectViewColor();
         
-        _CustoMoveItemBlock(sender.view.tag);
+        NSInteger tag = sender.view.tag;
+        
+        if (oldSelectIndex == tag) {
+            return;
+        }else{
+            oldSelectIndex = tag;
+            _CustoMoveItemBlock(tag);
+        }
     }
     
 }

@@ -14,6 +14,7 @@
 @property (nonatomic, assign) NSInteger typeId;     // 线路类型Id
 @property (nonatomic, assign) NSInteger tourisId;   // 线路id
 @property (nonatomic, strong) Traveltrip *traveltrip;
+//@property (nonatomic, assign) NSInteger routeId;    // 线路Id
 
 // 主页的数据
 @property (nonatomic, strong) HomePageData *homePageData;
@@ -47,4 +48,10 @@
  *
  */
 - (RACSignal *)getTourisEvaluate;
+
+/**
+ *  @brief 获取线路服务介绍（1.0）
+ *
+ */
+- (RACSignal *)getServiceIntroduction;
 @end

@@ -13,6 +13,7 @@ NSString *const getHomePageData = @"app/homepage/getHomePageData";
 NSString *const getTouristroutesList = @"app/touristroutes/getTouristroutesList";
 NSString *const getTourisDetails = @"app/touristroutes/getTourisDetails";
 NSString *const getTourisEvaluate = @"app/touristroutes/getTourisEvaluate";
+NSString *const getServiceIntroduction = @"app/touristroutes/getServiceIntroduction";
 
 @implementation RequestBaseAPI (Main)
 
@@ -64,5 +65,12 @@ NSString *const getTourisEvaluate = @"app/touristroutes/getTourisEvaluate";
     
     return [self requestWithType:RequestAPITypePost
                           params:[self getDesEncryptWithString:params]];
+}
+
+-(RACSignal *)getServiceIntroductionWithRouteId:(NSInteger)routeId{
+    
+    NSString *params = [NSString stringWithFormat:@"server=%@&routeId=%ld",getServiceIntroduction,routeId];
+    
+    return [self requestWithType:RequestAPITypePost params:[self getDesEncryptWithString:params]];
 }
 @end

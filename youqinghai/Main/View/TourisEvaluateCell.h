@@ -12,4 +12,13 @@
 
 @property (nonatomic, strong) TourisEvaluate *tourisEvaluate;
 
+/**
+ *  @brief 计算row的高度
+ *
+ *  @param tourisEvaluate <#tourisEvaluate description#>
+ *
+ *  @return <#return value description#>
+ */
++ (CGFloat)cellWithRowHeight:(TourisEvaluate *)tourisEvaluate;
+
 @end

@@ -11,11 +11,14 @@
 #import "CustomMoveItemView.h"
 #import "TourismDetailView.h"
 #import "TourisEvaluateView.h"
+#import "ServiceIntroductionView.h"
 
 #import "MainViewModel.h"
 
 @interface TourismDetailController (){
-    NSInteger clickCount;
+    BOOL isRequestTourismDetail;
+    BOOL isRequestTourisEvaluate;
+    BOOL isRequestServiceIntroduction;
 }
 
 @property (nonatomic, strong) MainViewModel *mainViewModel;
@@ -24,6 +27,7 @@
 
 @property (nonatomic, strong) TourismDetailView *tourismDetailView;
 @property (nonatomic, strong) TourisEvaluateView *tourisEvaluateView;
+@property (nonatomic, strong) ServiceIntroductionView *serviceIntroductionView;
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UILabel *collectionNumLab;
@@ -74,18 +78,29 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     CustomMoveItemView *customMoveItemView = [[CustomMoveItemView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, 40) withItems:@[@"线路详情",@"线路评价",@"服务介绍"]];
     [customMoveItemView setCustoMoveItemBlock:^(TourismDetailType type) {
-        clickCount ++;
         switch (type) {
             case TourismDetailTypeWithIntroduction: {
-                [self loadTourisDetailsData];
+                if (isRequestTourismDetail) {
+                    self.myTableView.tableFooterView = self.tourismDetailView;
+                }else{
+                     [self loadTourisDetailsData];
+                }
                 break;
             }
             case TourismDetailTypeWithEvaluate: {
-                [self loadTourisEvaluate];
+                if (isRequestTourisEvaluate) {
+                    self.myTableView.tableFooterView = self.tourisEvaluateView;
+                }else{
+                    [self loadTourisEvaluate];
+                }
                 break;
             }
             case TourismDetailTypeWithService: {
-
+                if (isRequestServiceIntroduction) {
+                    self.myTableView.tableFooterView = self.serviceIntroductionView;
+                }else{
+                    [self loadServiceIntroduction];
+                }
                 break;
             }
         }
@@ -109,7 +124,7 @@
             break;
         }
         case TourismDetailTypeWithService: {
-            [self loadTourisDetailsData];
+            [self loadServiceIntroduction];
             break;
         }
     }
@@ -130,11 +145,12 @@
         
         if (x) {
             
-            if (clickCount == 0) {
-                self.myTableView.tableHeaderView = self.tableViewHeaderView;
-            }
+            isRequestTourismDetail = YES;
+            
+            self.myTableView.tableHeaderView = self.tableViewHeaderView;
             
             self.collectionNumLab.text = [@(self.mainViewModel.traveltrip.collectionNum) stringValue];
+            
             // 线路详情
             self.myTableView.tableFooterView = [self tourismDetailView];
             
@@ -156,6 +172,8 @@
     [RACObserve(self.mainViewModel, tourisEvaluate) subscribeNext:^(id x) {
         if (x) {
             
+            isRequestTourisEvaluate = YES;
+            
             self.tourisEvaluateView.tourisEvaluate = self.mainViewModel.tourisEvaluate;
             
             // 线路评价
@@ -164,7 +182,24 @@
     }];
 }
 
-// 加载线路服务
+// 加载服务介绍
+- (void)loadServiceIntroduction{
+    
+    self.mainViewModel.tourisId = self.recommend.Id;
+    
+    [[self.mainViewModel getServiceIntroduction] subscribeNext:^(NSString *value) {
+        
+        isRequestServiceIntroduction = YES;
+        self.myTableView.tableFooterView = self.serviceIntroductionView;
+        ServiceIntroduction *serviceIntroduction = [ServiceIntroduction mj_objectWithKeyValues:value];
+        self.serviceIntroductionView.content = serviceIntroduction.serviceInfo;
+        
+    } error:^(NSError *error) {
+        
+    } completed:^{
+        
+    }];
+}
 
 - (TourisEvaluateView *)tourisEvaluateView{
  
@@ -183,6 +218,14 @@
     _tourismDetailView.viewlist = self.mainViewModel.traveltrip.traveltriplist;
     
     return _tourismDetailView;
+}
+
+- (ServiceIntroductionView *)serviceIntroductionView{
+    if (!_serviceIntroductionView) {
+        _serviceIntroductionView = [[ServiceIntroductionView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.height - kScreenSize.width * 0.5 - 40)];
+        _serviceIntroductionView.tag = 1000;
+    }
+    return _serviceIntroductionView;
 }
 
 @end

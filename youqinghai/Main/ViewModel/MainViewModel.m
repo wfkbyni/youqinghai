@@ -72,5 +72,15 @@
     return signal;
 }
 
+-(RACSignal *)getServiceIntroduction{
+    
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getServiceIntroductionWithRouteId:self.tourisId]
+                         map:^id(id value) {
+                             
+        return value;
+    }];
+    
+    return signal;
+}
 
 @end

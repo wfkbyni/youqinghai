@@ -53,4 +53,12 @@
  */
 - (RACSignal *)getTourisEvaluateWithTourisId:(NSInteger)tourisId withPageIndex:(NSInteger)pageIndex withPageSize:(NSInteger)pageSize;
 
+/**
+ *  @brief 获取线路服务介绍（1.0）
+ *
+ *  @param routeId 线路id
+ *
+ *  @return <#return value description#>
+ */
+- (RACSignal *)getServiceIntroductionWithRouteId:(NSInteger)routeId;
 @end
