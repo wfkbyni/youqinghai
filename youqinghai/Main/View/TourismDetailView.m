@@ -22,14 +22,16 @@
     
     [self setFrame:CGRectMake(0, 0, kScreenSize.width, height)];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.frame];
-    [self addSubview:imageView];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:@"http://hiphotos.baidu.com/lvpics/pic/item/a1ad16fa4f2fd8fe59ee90d9.jpg"]];
-    
-    UIView *bgView = [[UIView alloc] initWithFrame:self.frame];
-    [bgView setBackgroundColor:[UIColor blackColor]];
-    [bgView setAlpha:0.5];
-    [self addSubview:bgView];
+    if (viewlist.count > 0) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.frame];
+        [self addSubview:imageView];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:@"http://hiphotos.baidu.com/lvpics/pic/item/a1ad16fa4f2fd8fe59ee90d9.jpg"]];
+        
+        UIView *bgView = [[UIView alloc] initWithFrame:self.frame];
+        [bgView setBackgroundColor:[UIColor blackColor]];
+        [bgView setAlpha:0.5];
+        [self addSubview:bgView];
+    }
     
     __block float y = line;
     [_viewlist enumerateObjectsUsingBlock:^(Traveltrip *traveltrip, NSUInteger idx, BOOL * _Nonnull stop) {

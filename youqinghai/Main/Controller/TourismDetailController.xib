@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TourismDetailController">
             <connections>
+                <outlet property="collectionBtn" destination="BjH-ls-3GK" id="vGb-qT-WSY"/>
                 <outlet property="collectionNumLab" destination="uYk-wT-nxl" id="jSY-FJ-zqp"/>
                 <outlet property="myTableView" destination="4oK-al-ZnG" id="V1Q-Kx-t9U"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -40,6 +41,9 @@
                                     </constraints>
                                     <state key="normal" image="collection_off"/>
                                     <state key="highlighted" image="collection_on"/>
+                                    <connections>
+                                        <action selector="addRoteAction:" destination="-1" eventType="touchUpInside" id="eFW-w3-GkG"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYk-wT-nxl">
                                     <rect key="frame" x="46" y="29" width="109" height="21"/>
@@ -71,11 +75,17 @@
                             <rect key="frame" x="200" y="0.0" width="200" height="50"/>
                             <color key="backgroundColor" red="0.93333333333333335" green="0.45098039215686275" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="我要拼车"/>
+                            <connections>
+                                <action selector="carPoolAction:" destination="-1" eventType="touchUpInside" id="lRv-zL-7s4"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o52-V5-ehi">
                             <rect key="frame" x="400" y="0.0" width="200" height="50"/>
                             <color key="backgroundColor" red="0.91764705882352937" green="0.29019607843137252" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="我要包车"/>
+                            <connections>
+                                <action selector="charteredAction:" destination="-1" eventType="touchUpInside" id="75d-Us-HI1"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.98823535439999999" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>

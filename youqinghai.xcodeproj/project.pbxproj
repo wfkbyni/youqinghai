@@ -14,9 +14,6 @@
 		9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB481C9EF3C90067B8D5 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB4F1C9EF44A0067B8D5 /* GTMBase64+Des.m */; };
 		9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */; };
-		9A637DAD1CA17EFE004D17BA /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DAC1CA17EFE004D17BA /* Recommend.m */; };
-		9A637DB01CA17FF2004D17BA /* TourismType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DAF1CA17FF2004D17BA /* TourismType.m */; };
-		9A637DB31CA1809B004D17BA /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB21CA1809B004D17BA /* Banner.m */; };
 		9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB51CA182FB004D17BA /* MainViewModel.m */; };
 		9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */; };
 		9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBC1CA18711004D17BA /* MainViewController.m */; };
@@ -29,7 +26,6 @@
 		9A637DD01CA2DBFF004D17BA /* TourismTypeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DCF1CA2DBFF004D17BA /* TourismTypeItemCell.xib */; };
 		9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */; };
 		9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */; };
-		9A637DD81CA41A9C004D17BA /* HomePageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DD71CA41A9C004D17BA /* HomePageData.m */; };
 		9A637DE61CA44279004D17BA /* RedirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DE41CA44279004D17BA /* RedirectViewController.m */; };
 		9A637DE71CA44279004D17BA /* RedirectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DE51CA44279004D17BA /* RedirectViewController.xib */; };
 		9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DEC1CA58846004D17BA /* TouristroutesViewController.m */; };
@@ -37,15 +33,26 @@
 		9A637DF41CA59584004D17BA /* TourismDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DF21CA59584004D17BA /* TourismDetailController.m */; };
 		9A637DF51CA59584004D17BA /* TourismDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DF31CA59584004D17BA /* TourismDetailController.xib */; };
 		9A637DF81CA626C2004D17BA /* CustomMoveItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DF71CA626C2004D17BA /* CustomMoveItemView.m */; };
-		9A637DFB1CA6337E004D17BA /* Traveltrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DFA1CA6337E004D17BA /* Traveltrip.m */; };
-		9A637DFE1CA635FF004D17BA /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DFD1CA635FF004D17BA /* Trip.m */; };
 		9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637E031CA6F00C004D17BA /* TourismDetailView.m */; };
 		9AD8325F1CA959C5002CE8B3 /* TourisEvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */; };
-		9AD832621CA95CD5002CE8B3 /* TourisEvaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832611CA95CD5002CE8B3 /* TourisEvaluate.m */; };
 		9AD832661CA96969002CE8B3 /* TourisEvaluateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832641CA96969002CE8B3 /* TourisEvaluateCell.m */; };
 		9AD8326D1CAAC579002CE8B3 /* ServiceIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8326C1CAAC579002CE8B3 /* ServiceIntroductionView.m */; };
 		9AD832701CAAC5BE002CE8B3 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8326F1CAAC5BE002CE8B3 /* NSString+Helper.m */; };
-		9AD832731CAACB74002CE8B3 /* ServiceIntroduction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832721CAACB74002CE8B3 /* ServiceIntroduction.m */; };
+		9AD8327F1CAC0EB7002CE8B3 /* CarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8327D1CAC0EB7002CE8B3 /* CarListViewController.m */; };
+		9AD832801CAC0EB7002CE8B3 /* CarListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD8327E1CAC0EB7002CE8B3 /* CarListViewController.xib */; };
+		9AD832861CAC106D002CE8B3 /* RequestBaseAPI+Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832851CAC106D002CE8B3 /* RequestBaseAPI+Car.m */; };
+		9AD832891CAC1398002CE8B3 /* CarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832881CAC1398002CE8B3 /* CarViewModel.m */; };
+		9AD832A11CAC1727002CE8B3 /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8328F1CAC1727002CE8B3 /* Banner.m */; };
+		9AD832A21CAC1727002CE8B3 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832911CAC1727002CE8B3 /* Car.m */; };
+		9AD832A31CAC1727002CE8B3 /* HomePageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832941CAC1727002CE8B3 /* HomePageData.m */; };
+		9AD832A41CAC1727002CE8B3 /* Recommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832961CAC1727002CE8B3 /* Recommend.m */; };
+		9AD832A51CAC1727002CE8B3 /* ServiceIntroduction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832981CAC1727002CE8B3 /* ServiceIntroduction.m */; };
+		9AD832A61CAC1727002CE8B3 /* TourisEvaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8329A1CAC1727002CE8B3 /* TourisEvaluate.m */; };
+		9AD832A71CAC1727002CE8B3 /* TourismType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8329C1CAC1727002CE8B3 /* TourismType.m */; };
+		9AD832A81CAC1727002CE8B3 /* Traveltrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8329E1CAC1727002CE8B3 /* Traveltrip.m */; };
+		9AD832A91CAC1727002CE8B3 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832A01CAC1727002CE8B3 /* Trip.m */; };
+		9AD832AC1CAC1B16002CE8B3 /* CarListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832AB1CAC1B16002CE8B3 /* CarListCell.m */; };
+		9AD832AE1CAC1B28002CE8B3 /* CarListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD832AD1CAC1B28002CE8B3 /* CarListCell.xib */; };
 		9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0111C9ED3E100AD2FC1 /* main.m */; };
 		9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1C0141C9ED3E100AD2FC1 /* AppDelegate.m */; };
 		9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1C01C1C9ED3E100AD2FC1 /* Assets.xcassets */; };
@@ -71,12 +78,6 @@
 		9A1FEB4F1C9EF44A0067B8D5 /* GTMBase64+Des.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMBase64+Des.m"; sourceTree = "<group>"; };
 		9A1FEB551C9EF69A0067B8D5 /* RequestBaseAPI+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+User.h"; sourceTree = "<group>"; };
 		9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RequestBaseAPI+User.m"; sourceTree = "<group>"; };
-		9A637DAB1CA17EFE004D17BA /* Recommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend.h; sourceTree = "<group>"; };
-		9A637DAC1CA17EFE004D17BA /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
-		9A637DAE1CA17FF2004D17BA /* TourismType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismType.h; sourceTree = "<group>"; };
-		9A637DAF1CA17FF2004D17BA /* TourismType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismType.m; sourceTree = "<group>"; };
-		9A637DB11CA1809B004D17BA /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
-		9A637DB21CA1809B004D17BA /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
 		9A637DB41CA182FB004D17BA /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		9A637DB51CA182FB004D17BA /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewModel.m; path = youqinghai/Main/ViewModel/MainViewModel.m; sourceTree = SOURCE_ROOT; };
 		9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+Main.h"; sourceTree = "<group>"; };
@@ -97,9 +98,6 @@
 		9A637DD11CA2E580004D17BA /* RecommendTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendTypeCell.h; sourceTree = "<group>"; };
 		9A637DD21CA2E580004D17BA /* RecommendTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendTypeCell.m; sourceTree = "<group>"; };
 		9A637DD31CA2E580004D17BA /* RecommendTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTypeCell.xib; sourceTree = "<group>"; };
-		9A637DD61CA41A9C004D17BA /* HomePageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageData.h; sourceTree = "<group>"; };
-		9A637DD71CA41A9C004D17BA /* HomePageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageData.m; sourceTree = "<group>"; };
-		9A637DE01CA423CF004D17BA /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		9A637DE31CA44279004D17BA /* RedirectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedirectViewController.h; sourceTree = "<group>"; };
 		9A637DE41CA44279004D17BA /* RedirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedirectViewController.m; sourceTree = "<group>"; };
 		9A637DE51CA44279004D17BA /* RedirectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedirectViewController.xib; sourceTree = "<group>"; };
@@ -111,24 +109,45 @@
 		9A637DF31CA59584004D17BA /* TourismDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TourismDetailController.xib; sourceTree = "<group>"; };
 		9A637DF61CA626C2004D17BA /* CustomMoveItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMoveItemView.h; sourceTree = "<group>"; };
 		9A637DF71CA626C2004D17BA /* CustomMoveItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMoveItemView.m; sourceTree = "<group>"; };
-		9A637DF91CA6337E004D17BA /* Traveltrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Traveltrip.h; sourceTree = "<group>"; };
-		9A637DFA1CA6337E004D17BA /* Traveltrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Traveltrip.m; sourceTree = "<group>"; };
-		9A637DFC1CA635FF004D17BA /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
-		9A637DFD1CA635FF004D17BA /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
 		9A637E021CA6F00C004D17BA /* TourismDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismDetailView.h; sourceTree = "<group>"; };
 		9A637E031CA6F00C004D17BA /* TourismDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismDetailView.m; sourceTree = "<group>"; };
 		9AD8325D1CA959C5002CE8B3 /* TourisEvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateView.h; sourceTree = "<group>"; };
 		9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourisEvaluateView.m; sourceTree = "<group>"; };
-		9AD832601CA95CD5002CE8B3 /* TourisEvaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluate.h; sourceTree = "<group>"; };
-		9AD832611CA95CD5002CE8B3 /* TourisEvaluate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourisEvaluate.m; sourceTree = "<group>"; };
 		9AD832631CA96969002CE8B3 /* TourisEvaluateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateCell.h; sourceTree = "<group>"; };
 		9AD832641CA96969002CE8B3 /* TourisEvaluateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourisEvaluateCell.m; sourceTree = "<group>"; };
 		9AD8326B1CAAC579002CE8B3 /* ServiceIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceIntroductionView.h; sourceTree = "<group>"; };
 		9AD8326C1CAAC579002CE8B3 /* ServiceIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceIntroductionView.m; sourceTree = "<group>"; };
 		9AD8326E1CAAC5BE002CE8B3 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		9AD8326F1CAAC5BE002CE8B3 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
-		9AD832711CAACB74002CE8B3 /* ServiceIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceIntroduction.h; sourceTree = "<group>"; };
-		9AD832721CAACB74002CE8B3 /* ServiceIntroduction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceIntroduction.m; sourceTree = "<group>"; };
+		9AD8327C1CAC0EB7002CE8B3 /* CarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListViewController.h; sourceTree = "<group>"; };
+		9AD8327D1CAC0EB7002CE8B3 /* CarListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListViewController.m; sourceTree = "<group>"; };
+		9AD8327E1CAC0EB7002CE8B3 /* CarListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarListViewController.xib; sourceTree = "<group>"; };
+		9AD832841CAC106D002CE8B3 /* RequestBaseAPI+Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+Car.h"; sourceTree = "<group>"; };
+		9AD832851CAC106D002CE8B3 /* RequestBaseAPI+Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RequestBaseAPI+Car.m"; sourceTree = "<group>"; };
+		9AD832871CAC1398002CE8B3 /* CarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewModel.h; sourceTree = "<group>"; };
+		9AD832881CAC1398002CE8B3 /* CarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewModel.m; sourceTree = "<group>"; };
+		9AD8328E1CAC1727002CE8B3 /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
+		9AD8328F1CAC1727002CE8B3 /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
+		9AD832901CAC1727002CE8B3 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		9AD832911CAC1727002CE8B3 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		9AD832921CAC1727002CE8B3 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		9AD832931CAC1727002CE8B3 /* HomePageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageData.h; sourceTree = "<group>"; };
+		9AD832941CAC1727002CE8B3 /* HomePageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageData.m; sourceTree = "<group>"; };
+		9AD832951CAC1727002CE8B3 /* Recommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend.h; sourceTree = "<group>"; };
+		9AD832961CAC1727002CE8B3 /* Recommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend.m; sourceTree = "<group>"; };
+		9AD832971CAC1727002CE8B3 /* ServiceIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceIntroduction.h; sourceTree = "<group>"; };
+		9AD832981CAC1727002CE8B3 /* ServiceIntroduction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceIntroduction.m; sourceTree = "<group>"; };
+		9AD832991CAC1727002CE8B3 /* TourisEvaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluate.h; sourceTree = "<group>"; };
+		9AD8329A1CAC1727002CE8B3 /* TourisEvaluate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourisEvaluate.m; sourceTree = "<group>"; };
+		9AD8329B1CAC1727002CE8B3 /* TourismType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismType.h; sourceTree = "<group>"; };
+		9AD8329C1CAC1727002CE8B3 /* TourismType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismType.m; sourceTree = "<group>"; };
+		9AD8329D1CAC1727002CE8B3 /* Traveltrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Traveltrip.h; sourceTree = "<group>"; };
+		9AD8329E1CAC1727002CE8B3 /* Traveltrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Traveltrip.m; sourceTree = "<group>"; };
+		9AD8329F1CAC1727002CE8B3 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		9AD832A01CAC1727002CE8B3 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		9AD832AA1CAC1B16002CE8B3 /* CarListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListCell.h; sourceTree = "<group>"; };
+		9AD832AB1CAC1B16002CE8B3 /* CarListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListCell.m; sourceTree = "<group>"; };
+		9AD832AD1CAC1B28002CE8B3 /* CarListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarListCell.xib; sourceTree = "<group>"; };
 		9AF1C00D1C9ED3E100AD2FC1 /* youqinghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youqinghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF1C0111C9ED3E100AD2FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -174,33 +193,8 @@
 				9A637DBA1CA186EE004D17BA /* Controller */,
 				9A1FEB361C9EE1470067B8D5 /* View */,
 				9A1FEB371C9EE1470067B8D5 /* ViewModel */,
-				9A1FEB351C9EE1470067B8D5 /* Model */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		9A1FEB351C9EE1470067B8D5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9A637DE01CA423CF004D17BA /* DataModel.h */,
-				9A637DAB1CA17EFE004D17BA /* Recommend.h */,
-				9A637DAC1CA17EFE004D17BA /* Recommend.m */,
-				9A637DAE1CA17FF2004D17BA /* TourismType.h */,
-				9A637DAF1CA17FF2004D17BA /* TourismType.m */,
-				9A637DB11CA1809B004D17BA /* Banner.h */,
-				9A637DB21CA1809B004D17BA /* Banner.m */,
-				9A637DD61CA41A9C004D17BA /* HomePageData.h */,
-				9A637DD71CA41A9C004D17BA /* HomePageData.m */,
-				9A637DF91CA6337E004D17BA /* Traveltrip.h */,
-				9A637DFA1CA6337E004D17BA /* Traveltrip.m */,
-				9A637DFC1CA635FF004D17BA /* Trip.h */,
-				9A637DFD1CA635FF004D17BA /* Trip.m */,
-				9AD832601CA95CD5002CE8B3 /* TourisEvaluate.h */,
-				9AD832611CA95CD5002CE8B3 /* TourisEvaluate.m */,
-				9AD832711CAACB74002CE8B3 /* ServiceIntroduction.h */,
-				9AD832721CAACB74002CE8B3 /* ServiceIntroduction.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9A1FEB361C9EE1470067B8D5 /* View */ = {
@@ -258,6 +252,8 @@
 				9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */,
 				9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */,
 				9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */,
+				9AD832841CAC106D002CE8B3 /* RequestBaseAPI+Car.h */,
+				9AD832851CAC106D002CE8B3 /* RequestBaseAPI+Car.m */,
 			);
 			path = "Request API";
 			sourceTree = "<group>";
@@ -352,6 +348,71 @@
 			name = TourismDetailController;
 			sourceTree = "<group>";
 		};
+		9AD832741CAC0E2B002CE8B3 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				9AD832751CAC0E5B002CE8B3 /* Controller */,
+				9AD832771CAC0E5B002CE8B3 /* View */,
+				9AD832781CAC0E5B002CE8B3 /* ViewModel */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		9AD832751CAC0E5B002CE8B3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9AD8327C1CAC0EB7002CE8B3 /* CarListViewController.h */,
+				9AD8327D1CAC0EB7002CE8B3 /* CarListViewController.m */,
+				9AD8327E1CAC0EB7002CE8B3 /* CarListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9AD832771CAC0E5B002CE8B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AD832AA1CAC1B16002CE8B3 /* CarListCell.h */,
+				9AD832AB1CAC1B16002CE8B3 /* CarListCell.m */,
+				9AD832AD1CAC1B28002CE8B3 /* CarListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AD832781CAC0E5B002CE8B3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9AD832871CAC1398002CE8B3 /* CarViewModel.h */,
+				9AD832881CAC1398002CE8B3 /* CarViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9AD8328D1CAC1727002CE8B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AD8328E1CAC1727002CE8B3 /* Banner.h */,
+				9AD8328F1CAC1727002CE8B3 /* Banner.m */,
+				9AD832901CAC1727002CE8B3 /* Car.h */,
+				9AD832911CAC1727002CE8B3 /* Car.m */,
+				9AD832921CAC1727002CE8B3 /* DataModel.h */,
+				9AD832931CAC1727002CE8B3 /* HomePageData.h */,
+				9AD832941CAC1727002CE8B3 /* HomePageData.m */,
+				9AD832951CAC1727002CE8B3 /* Recommend.h */,
+				9AD832961CAC1727002CE8B3 /* Recommend.m */,
+				9AD832971CAC1727002CE8B3 /* ServiceIntroduction.h */,
+				9AD832981CAC1727002CE8B3 /* ServiceIntroduction.m */,
+				9AD832991CAC1727002CE8B3 /* TourisEvaluate.h */,
+				9AD8329A1CAC1727002CE8B3 /* TourisEvaluate.m */,
+				9AD8329B1CAC1727002CE8B3 /* TourismType.h */,
+				9AD8329C1CAC1727002CE8B3 /* TourismType.m */,
+				9AD8329D1CAC1727002CE8B3 /* Traveltrip.h */,
+				9AD8329E1CAC1727002CE8B3 /* Traveltrip.m */,
+				9AD8329F1CAC1727002CE8B3 /* Trip.h */,
+				9AD832A01CAC1727002CE8B3 /* Trip.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9AF1C0041C9ED3E100AD2FC1 = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +438,8 @@
 				9A1FEB451C9EF3C90067B8D5 /* ThirdParty */,
 				9A1FEB3C1C9EE2CA0067B8D5 /* Request API */,
 				9A1FEB381C9EE1770067B8D5 /* BaseViewController */,
+				9AD8328D1CAC1727002CE8B3 /* Model */,
+				9AD832741CAC0E2B002CE8B3 /* Car */,
 				9A1FEB341C9EE1470067B8D5 /* Main */,
 				9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */,
 				9AF1C0141C9ED3E100AD2FC1 /* AppDelegate.m */,
@@ -468,8 +531,10 @@
 				9A637DEF1CA58846004D17BA /* TouristroutesViewController.xib in Resources */,
 				9AF1C0201C9ED3E100AD2FC1 /* LaunchScreen.storyboard in Resources */,
 				9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */,
+				9AD832AE1CAC1B28002CE8B3 /* CarListCell.xib in Resources */,
 				9AF1C01D1C9ED3E100AD2FC1 /* Assets.xcassets in Resources */,
 				9A637DE71CA44279004D17BA /* RedirectViewController.xib in Resources */,
+				9AD832801CAC0EB7002CE8B3 /* CarListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,38 +593,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A637DFE1CA635FF004D17BA /* Trip.m in Sources */,
-				9AD832621CA95CD5002CE8B3 /* TourisEvaluate.m in Sources */,
+				9AD832A41CAC1727002CE8B3 /* Recommend.m in Sources */,
+				9AD832A21CAC1727002CE8B3 /* Car.m in Sources */,
 				9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */,
 				9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */,
 				9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */,
 				9A637DF81CA626C2004D17BA /* CustomMoveItemView.m in Sources */,
 				9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */,
-				9A637DB31CA1809B004D17BA /* Banner.m in Sources */,
+				9AD8327F1CAC0EB7002CE8B3 /* CarListViewController.m in Sources */,
+				9AD832A81CAC1727002CE8B3 /* Traveltrip.m in Sources */,
 				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
-				9A637DD81CA41A9C004D17BA /* HomePageData.m in Sources */,
 				9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */,
 				9A1FEB441C9EEA120067B8D5 /* ResponseBaseData.m in Sources */,
+				9AD832A71CAC1727002CE8B3 /* TourismType.m in Sources */,
 				9AD832661CA96969002CE8B3 /* TourisEvaluateCell.m in Sources */,
 				9A1FEB401C9EE4D20067B8D5 /* RequestBaseAPI.m in Sources */,
-				9A637DAD1CA17EFE004D17BA /* Recommend.m in Sources */,
 				9AD832701CAAC5BE002CE8B3 /* NSString+Helper.m in Sources */,
-				9A637DFB1CA6337E004D17BA /* Traveltrip.m in Sources */,
 				9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */,
+				9AD832A31CAC1727002CE8B3 /* HomePageData.m in Sources */,
+				9AD832A11CAC1727002CE8B3 /* Banner.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
-				9A637DB01CA17FF2004D17BA /* TourismType.m in Sources */,
+				9AD832A61CAC1727002CE8B3 /* TourisEvaluate.m in Sources */,
 				9A637DCE1CA2DBEE004D17BA /* TourismTypeItemCell.m in Sources */,
 				9A637DE61CA44279004D17BA /* RedirectViewController.m in Sources */,
-				9AD832731CAACB74002CE8B3 /* ServiceIntroduction.m in Sources */,
+				9AD832891CAC1398002CE8B3 /* CarViewModel.m in Sources */,
 				9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */,
+				9AD832A51CAC1727002CE8B3 /* ServiceIntroduction.m in Sources */,
 				9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */,
+				9AD832861CAC106D002CE8B3 /* RequestBaseAPI+Car.m in Sources */,
 				9A637DF41CA59584004D17BA /* TourismDetailController.m in Sources */,
 				9A637DC11CA18993004D17BA /* TempViewController.m in Sources */,
 				9A637DCB1CA2D8AC004D17BA /* UIView+Helper.m in Sources */,
+				9AD832A91CAC1727002CE8B3 /* Trip.m in Sources */,
 				9A1FEB3B1C9EE1770067B8D5 /* BaseViewController.m in Sources */,
 				9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */,
 				9AD8326D1CAAC579002CE8B3 /* ServiceIntroductionView.m in Sources */,
 				9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */,
+				9AD832AC1CAC1B16002CE8B3 /* CarListCell.m in Sources */,
 				9AD8325F1CA959C5002CE8B3 /* TourisEvaluateView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

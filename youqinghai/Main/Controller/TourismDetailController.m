@@ -12,6 +12,7 @@
 #import "TourismDetailView.h"
 #import "TourisEvaluateView.h"
 #import "ServiceIntroductionView.h"
+#import "CarListViewController.h"
 
 #import "MainViewModel.h"
 
@@ -31,6 +32,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UILabel *collectionNumLab;
+@property (weak, nonatomic) IBOutlet UIButton *collectionBtn;
 
 @end
 
@@ -151,11 +153,10 @@
             
             self.myTableView.tableHeaderView = self.tableViewHeaderView;
             
-            self.collectionNumLab.text = [@(self.mainViewModel.traveltrip.collectionNum) stringValue];
+            [self showCollectionState:self.mainViewModel.traveltrip.isCollection withCollectionNum:self.mainViewModel.traveltrip.collectionNum];
             
             // 线路详情
             self.myTableView.tableFooterView = [self tourismDetailView];
-            
         }
     }];
 }
@@ -193,6 +194,7 @@
         
         isRequestServiceIntroduction = YES;
         self.myTableView.tableFooterView = self.serviceIntroductionView;
+        
         ServiceIntroduction *serviceIntroduction = [ServiceIntroduction mj_objectWithKeyValues:value];
         self.serviceIntroductionView.content = serviceIntroduction.serviceInfo;
         
@@ -201,6 +203,43 @@
     } completed:^{
         
     }];
+}
+
+- (IBAction)addRoteAction:(id)sender {
+    
+    [[self.mainViewModel addDriverOrRoteId] subscribeNext:^(id value) {
+        
+        RoteCollection *roteCollection = [RoteCollection mj_objectWithKeyValues:value];
+        
+        [self showCollectionState:roteCollection.state withCollectionNum:roteCollection.collNum];
+    } error:^(NSError *error) {
+        
+    } completed:^{
+        
+    }];
+}
+
+// 拼车
+- (IBAction)carPoolAction:(id)sender {
+}
+
+// 包车
+- (IBAction)charteredAction:(id)sender {
+    CarListViewController *controller = [[CarListViewController alloc] init];
+    controller.recommend = self.recommend;
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+// 显示收藏状态
+- (void)showCollectionState:(BOOL)isCollection withCollectionNum:(NSInteger)num{
+    
+    self.collectionNumLab.text = [@(num) stringValue];
+    
+    if (isCollection) {
+        [self.collectionBtn setImage:[UIImage imageNamed:@"collection_off"] forState:UIControlStateNormal];
+    }else{
+        [self.collectionBtn setImage:[UIImage imageNamed:@"collection_on"] forState:UIControlStateNormal];
+    }
 }
 
 - (TourisEvaluateView *)tourisEvaluateView{
@@ -215,9 +254,8 @@
 - (TourismDetailView *)tourismDetailView{
     if (!_tourismDetailView) {
         _tourismDetailView = [[TourismDetailView alloc] init];
+        _tourismDetailView.viewlist = self.mainViewModel.traveltrip.traveltriplist;
     }
-    
-    _tourismDetailView.viewlist = self.mainViewModel.traveltrip.traveltriplist;
     
     return _tourismDetailView;
 }

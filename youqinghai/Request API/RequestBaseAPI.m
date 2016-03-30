@@ -24,12 +24,9 @@
     return requestBaseAPI;
 }
 
--(instancetype)init{
-    
-    if (self = [super init]) {
-        
-    }
-    return self;
+
+- (NSString *)getDesEncryptWithString:(NSString *)value{
+    return [GTMBase64 desEncrypt:value];
 }
 
 #pragma mark - 基本

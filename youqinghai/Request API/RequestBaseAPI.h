@@ -19,6 +19,15 @@ typedef NS_ENUM(NSUInteger,RequestAPIType) {
 + (instancetype)standardAPI;
 
 /**
+ *  @brief 给请求参数加密
+ *
+ *  @param value 需要加密的字符串
+ *
+ *  @return 加密后的字符串
+ */
+- (NSString *)getDesEncryptWithString:(NSString *)value;
+
+/**
  *  POST请求
  *
  *  @param apiString 使用接口文档规定的 API

@@ -14,3 +14,4 @@
 #import "Trip.h"
 #import "TourisEvaluate.h"
 #import "ServiceIntroduction.h"
+#import "Car.h"

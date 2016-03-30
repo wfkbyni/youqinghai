@@ -25,7 +25,9 @@
 
 -(RACSignal *)getHomePageData{
     
-    RACSignal *signal = [[[RequestBaseAPI standardAPI] getHomePageDataWithMark:self.mark withPageIndex:1 withPageSize:pageSize]
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getHomePageDataWithMark:self.mark
+                                                                 withPageIndex:1
+                                                                  withPageSize:pageSize]
                          map:^id(id value) {
         
         self.homePageData = [HomePageData mj_objectWithKeyValues:value];
@@ -38,7 +40,10 @@
 
 -(RACSignal *)getTouristroutesList{
     
-    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTouristroutesListWithTypeId:self.typeId wihtPageIndex:1 withPageSize:pageSize] map:^id(id value) {
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTouristroutesListWithTypeId:self.typeId
+                                                                        wihtPageIndex:1
+                                                                         withPageSize:pageSize]
+                         map:^id(id value) {
         
         self.recommends = [Recommend mj_objectArrayWithKeyValuesArray:value];
         
@@ -50,7 +55,9 @@
 
 -(RACSignal *)getTourisDetails{
     
-    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTourisDetailsWithTourisId:self.typeId withUserId:userId] map:^id(id value) {
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTourisDetailsWithTourisId:self.typeId
+                                                                         withUserId:userId]
+                         map:^id(id value) {
        
         self.traveltrip = [Traveltrip mj_objectWithKeyValues:value];
         
@@ -62,7 +69,10 @@
 
 -(RACSignal *)getTourisEvaluate{
     
-    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTourisEvaluateWithTourisId:self.tourisId withPageIndex:1 withPageSize:pageSize] map:^id(id value) {
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getTourisEvaluateWithTourisId:self.tourisId
+                                                                       withPageIndex:1
+                                                                        withPageSize:pageSize]
+                         map:^id(id value) {
         
         self.tourisEvaluate = [TourisEvaluate mj_objectArrayWithKeyValuesArray:value];
         
@@ -81,6 +91,21 @@
     }];
     
     return signal;
+}
+
+-(RACSignal *)addDriverOrRoteId{
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] addDriverOrRoteIdWithUserId:userId
+                                                                        withTypeId:self.tourisId
+                                                                          withType:0]
+                         map:^id(id value) {
+        
+                             
+        return value;
+    }];
+    
+    return signal;
+    
+    
 }
 
 @end

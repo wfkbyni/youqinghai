@@ -11,3 +11,7 @@
 @implementation ServiceIntroduction
 
 @end
+
+@implementation RoteCollection
+
+@end

@@ -57,8 +57,16 @@
  *  @brief 获取线路服务介绍（1.0）
  *
  *  @param routeId 线路id
- *
- *  @return <#return value description#>
  */
 - (RACSignal *)getServiceIntroductionWithRouteId:(NSInteger)routeId;
+
+/**
+ *  @brief 添加线路和司机收藏（1.0）
+ *
+ *  @param userId 用户id
+ *  @param typeId 收藏的司机或线路Id
+ *  @param type 0：路线，1:司机
+ *
+ */
+- (RACSignal *)addDriverOrRoteIdWithUserId:(NSInteger)userId withTypeId:(NSInteger)typeId withType:(NSInteger)type;
 @end

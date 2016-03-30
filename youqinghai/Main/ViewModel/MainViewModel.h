@@ -54,4 +54,10 @@
  *
  */
 - (RACSignal *)getServiceIntroduction;
+
+/**
+ *  @brief 添加线路和司机收藏（1.0）
+ *
+ */
+- (RACSignal *)addDriverOrRoteId;
 @end

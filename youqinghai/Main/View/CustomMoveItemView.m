@@ -24,6 +24,8 @@
     if (self = [super initWithFrame:frame]) {
         NSAssert(items, @"items not nil");
         
+        [self setBackgroundColor:[UIColor whiteColor]];
+        
         float width = kScreenSize.width / items.count;
         
         for (int i = 0; i < items.count; i++) {

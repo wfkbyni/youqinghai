@@ -13,3 +13,10 @@
 @property (nonatomic, strong) NSString *serviceInfo;
 
 @end
+
+@interface RoteCollection : ResponseBaseData
+
+@property (nonatomic, assign) NSInteger state;
+@property (nonatomic, assign) NSInteger collNum;
+
+@end

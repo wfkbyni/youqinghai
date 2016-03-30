@@ -14,19 +14,9 @@ NSString *const getTouristroutesList = @"app/touristroutes/getTouristroutesList"
 NSString *const getTourisDetails = @"app/touristroutes/getTourisDetails";
 NSString *const getTourisEvaluate = @"app/touristroutes/getTourisEvaluate";
 NSString *const getServiceIntroduction = @"app/touristroutes/getServiceIntroduction";
+NSString *const addDriverOrRoteId = @"app/touristroutes/addDriverOrRoteId";
 
 @implementation RequestBaseAPI (Main)
-
-/**
- *  @brief 给请求参数加密
- *
- *  @param value 需要加密的字符串
- *
- *  @return 加密后的字符串
- */
-- (NSString *)getDesEncryptWithString:(NSString *)value{
-    return [GTMBase64 desEncrypt:value];
-}
 
 -(RACSignal *)getHomePageDataWithMark:(NSInteger)mark
                         withPageIndex:(NSInteger)pageIndex
@@ -72,5 +62,13 @@ NSString *const getServiceIntroduction = @"app/touristroutes/getServiceIntroduct
     NSString *params = [NSString stringWithFormat:@"server=%@&routeId=%ld",getServiceIntroduction,routeId];
     
     return [self requestWithType:RequestAPITypePost params:[self getDesEncryptWithString:params]];
+}
+
+-(RACSignal *)addDriverOrRoteIdWithUserId:(NSInteger)userId withTypeId:(NSInteger)typeId withType:(NSInteger)type{
+    
+    NSString *parasm = [NSString stringWithFormat:@"server=%@&userId=%ld&typeId=%ld&type=%ld",addDriverOrRoteId,userId,typeId,type];
+    
+    return [self requestWithType:RequestAPITypePost params:[self getDesEncryptWithString:parasm]];
+    
 }
 @end

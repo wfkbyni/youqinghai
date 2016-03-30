@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "RedirectViewController.h"
+#import "TourismDetailController.h"
 
 #import "MainViewModel.h"
 
@@ -191,6 +192,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    self.navigationController.navigationBarHidden = NO;
+    
+    Recommend *recommend = self.mainViewModel.homePageData.recommend[indexPath.row];
+    
+    TourismDetailController *controller = [[TourismDetailController alloc] init];
+    controller.recommend = recommend;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end
