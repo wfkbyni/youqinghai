@@ -34,6 +34,10 @@
 		9A637DF51CA59584004D17BA /* TourismDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A637DF31CA59584004D17BA /* TourismDetailController.xib */; };
 		9A637DF81CA626C2004D17BA /* CustomMoveItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DF71CA626C2004D17BA /* CustomMoveItemView.m */; };
 		9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637E031CA6F00C004D17BA /* TourismDetailView.m */; };
+		9AB9F1BF1CAD64190091967F /* CarTypeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1BE1CAD64190091967F /* CarTypeTableView.m */; };
+		9AB9F1C31CAD781B0091967F /* CarDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1C11CAD781B0091967F /* CarDetailController.m */; };
+		9AB9F1C41CAD781B0091967F /* CarDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB9F1C21CAD781B0091967F /* CarDetailController.xib */; };
+		9AB9F1C71CAD7B880091967F /* CarDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1C61CAD7B880091967F /* CarDetail.m */; };
 		9AD8325F1CA959C5002CE8B3 /* TourisEvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */; };
 		9AD832661CA96969002CE8B3 /* TourisEvaluateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832641CA96969002CE8B3 /* TourisEvaluateCell.m */; };
 		9AD8326D1CAAC579002CE8B3 /* ServiceIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8326C1CAAC579002CE8B3 /* ServiceIntroductionView.m */; };
@@ -111,6 +115,13 @@
 		9A637DF71CA626C2004D17BA /* CustomMoveItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMoveItemView.m; sourceTree = "<group>"; };
 		9A637E021CA6F00C004D17BA /* TourismDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismDetailView.h; sourceTree = "<group>"; };
 		9A637E031CA6F00C004D17BA /* TourismDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismDetailView.m; sourceTree = "<group>"; };
+		9AB9F1BD1CAD64190091967F /* CarTypeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarTypeTableView.h; sourceTree = "<group>"; };
+		9AB9F1BE1CAD64190091967F /* CarTypeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarTypeTableView.m; sourceTree = "<group>"; };
+		9AB9F1C01CAD781B0091967F /* CarDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetailController.h; sourceTree = "<group>"; };
+		9AB9F1C11CAD781B0091967F /* CarDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDetailController.m; sourceTree = "<group>"; };
+		9AB9F1C21CAD781B0091967F /* CarDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarDetailController.xib; sourceTree = "<group>"; };
+		9AB9F1C51CAD7B880091967F /* CarDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetail.h; sourceTree = "<group>"; };
+		9AB9F1C61CAD7B880091967F /* CarDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDetail.m; sourceTree = "<group>"; };
 		9AD8325D1CA959C5002CE8B3 /* TourisEvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateView.h; sourceTree = "<group>"; };
 		9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourisEvaluateView.m; sourceTree = "<group>"; };
 		9AD832631CA96969002CE8B3 /* TourisEvaluateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateCell.h; sourceTree = "<group>"; };
@@ -364,6 +375,9 @@
 				9AD8327C1CAC0EB7002CE8B3 /* CarListViewController.h */,
 				9AD8327D1CAC0EB7002CE8B3 /* CarListViewController.m */,
 				9AD8327E1CAC0EB7002CE8B3 /* CarListViewController.xib */,
+				9AB9F1C01CAD781B0091967F /* CarDetailController.h */,
+				9AB9F1C11CAD781B0091967F /* CarDetailController.m */,
+				9AB9F1C21CAD781B0091967F /* CarDetailController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -374,6 +388,8 @@
 				9AD832AA1CAC1B16002CE8B3 /* CarListCell.h */,
 				9AD832AB1CAC1B16002CE8B3 /* CarListCell.m */,
 				9AD832AD1CAC1B28002CE8B3 /* CarListCell.xib */,
+				9AB9F1BD1CAD64190091967F /* CarTypeTableView.h */,
+				9AB9F1BE1CAD64190091967F /* CarTypeTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,6 +425,8 @@
 				9AD8329E1CAC1727002CE8B3 /* Traveltrip.m */,
 				9AD8329F1CAC1727002CE8B3 /* Trip.h */,
 				9AD832A01CAC1727002CE8B3 /* Trip.m */,
+				9AB9F1C51CAD7B880091967F /* CarDetail.h */,
+				9AB9F1C61CAD7B880091967F /* CarDetail.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -529,6 +547,7 @@
 				9A637DD01CA2DBFF004D17BA /* TourismTypeItemCell.xib in Resources */,
 				9A637DC71CA2D7D6004D17BA /* TourismTypeCell.xib in Resources */,
 				9A637DEF1CA58846004D17BA /* TouristroutesViewController.xib in Resources */,
+				9AB9F1C41CAD781B0091967F /* CarDetailController.xib in Resources */,
 				9AF1C0201C9ED3E100AD2FC1 /* LaunchScreen.storyboard in Resources */,
 				9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */,
 				9AD832AE1CAC1B28002CE8B3 /* CarListCell.xib in Resources */,
@@ -593,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB9F1C71CAD7B880091967F /* CarDetail.m in Sources */,
 				9AD832A41CAC1727002CE8B3 /* Recommend.m in Sources */,
 				9AD832A21CAC1727002CE8B3 /* Car.m in Sources */,
 				9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */,
@@ -611,6 +631,7 @@
 				9AD832701CAAC5BE002CE8B3 /* NSString+Helper.m in Sources */,
 				9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */,
 				9AD832A31CAC1727002CE8B3 /* HomePageData.m in Sources */,
+				9AB9F1BF1CAD64190091967F /* CarTypeTableView.m in Sources */,
 				9AD832A11CAC1727002CE8B3 /* Banner.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
 				9AD832A61CAC1727002CE8B3 /* TourisEvaluate.m in Sources */,
@@ -629,6 +650,7 @@
 				9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */,
 				9AD8326D1CAAC579002CE8B3 /* ServiceIntroductionView.m in Sources */,
 				9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */,
+				9AB9F1C31CAD781B0091967F /* CarDetailController.m in Sources */,
 				9AD832AC1CAC1B16002CE8B3 /* CarListCell.m in Sources */,
 				9AD8325F1CA959C5002CE8B3 /* TourisEvaluateView.m in Sources */,
 			);

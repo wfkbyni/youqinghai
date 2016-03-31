@@ -15,3 +15,4 @@
 #import "TourisEvaluate.h"
 #import "ServiceIntroduction.h"
 #import "Car.h"
+#import "CarDetail.h"

@@ -24,3 +24,5 @@
 #import "NSString+Helper.h"
 
 #endif /* PrefixHeader_pch */
+
+#define myUserId 4

@@ -29,6 +29,7 @@
         float width = kScreenSize.width / items.count;
         
         for (int i = 0; i < items.count; i++) {
+
             UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(i * width, 0, width, CGRectGetHeight(frame))];
             lab.text = items[i];
             [lab setFont:[UIFont systemFontOfSize:15.0f]];
@@ -56,6 +57,7 @@
             
             UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTouchAction:)];
             [lab addGestureRecognizer:gesture];
+            
         }
         
         UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame) - 1, CGRectGetWidth(frame), 1)];
@@ -97,11 +99,11 @@
         
         NSInteger tag = sender.view.tag;
         
-        if (oldSelectIndex == tag) {
+        if (oldSelectIndex == tag && oldSelectIndex != 2 && oldSelectIndex != 1 && oldSelectIndex != 3) {
             return;
         }else{
             oldSelectIndex = tag;
-            _CustoMoveItemBlock(tag);
+            _CustoMoveItemBlock(tag,(UILabel *)sender.view);
         }
     }
     

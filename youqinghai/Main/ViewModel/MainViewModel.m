@@ -11,7 +11,6 @@
 
 #import "HomePageData.h"
 
-#define userId 4
 #define pageSize 20
 
 @implementation MainViewModel
@@ -56,7 +55,7 @@
 -(RACSignal *)getTourisDetails{
     
     RACSignal *signal = [[[RequestBaseAPI standardAPI] getTourisDetailsWithTourisId:self.typeId
-                                                                         withUserId:userId]
+                                                                         withUserId:myUserId]
                          map:^id(id value) {
        
         self.traveltrip = [Traveltrip mj_objectWithKeyValues:value];
@@ -94,7 +93,7 @@
 }
 
 -(RACSignal *)addDriverOrRoteId{
-    RACSignal *signal = [[[RequestBaseAPI standardAPI] addDriverOrRoteIdWithUserId:userId
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] addDriverOrRoteIdWithUserId:myUserId
                                                                         withTypeId:self.tourisId
                                                                           withType:0]
                          map:^id(id value) {

@@ -54,7 +54,7 @@
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", @"text/html", nil];
         NSDictionary *dic = @{@"key":params};
         NSString *urlString = [[NSString stringWithFormat:@"%@app.server",RequestUrl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        YQHLog(@"Request -->\n" "URL:  \n%@\n" "Parameters:\n%@\n     des:%@",urlString,[GTMBase64 desDecrypt:params],params);
+        YQHLog(@"\n\n\nRequest -->\n" "请求地址%@\n" "Parameters:明文参数  %@\nParameters:加密参数  %@\n\n\n",urlString,[GTMBase64 desDecrypt:params],params);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         switch (type) {
             case RequestAPITypeGet: {
@@ -79,7 +79,7 @@
                     [self processResponseObject:responseObject forTask:task subscriber:subscriber];
                 } failure:^(NSURLSessionDataTask *task, NSError *error) {
                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                    YQHLog(@"Response  -->\n" "URL:  %@\n" "error:\n%@\n", task.currentRequest.URL, error);
+                    YQHLog(@"\n\n\n响应结果：Response  -->" "URL:  %@\n" "error:\n%@\n\n\n", task.currentRequest.URL, error);
                     if (!error) {
                         error = [NSError errorWithDomain:@"请求失败" code:-1001 userInfo:nil];
                     }
@@ -115,7 +115,7 @@
             [self processResponseObject:responseObject forTask:task subscriber:subscriber];
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-            YQHLog(@"Response  -->\n" "URL:  %@\n" "error:\n%@\n", task.currentRequest.URL, error);
+            YQHLog(@"\n\n\n响应结果：Response  -->" "URL:  %@\n" "error:\n%@\n\n\n", task.currentRequest.URL, error);
             [subscriber sendError:error];
         }];
         return [RACDisposable disposableWithBlock:^{
@@ -144,7 +144,7 @@
             [self processResponseObject:responseObject forTask:task subscriber:subscriber];
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-            YQHLog(@"Response  -->\n" "URL:  %@\n" "error:\n%@\n", task.currentRequest.URL, error);
+            YQHLog(@"\n\n\n响应结果：Response  -->" "URL:  %@\n" "error:\n%@\n\n\n", task.currentRequest.URL, error);
             [subscriber sendError:error];
         }];
         return [RACDisposable disposableWithBlock:^{
@@ -180,7 +180,7 @@
         NSString *value = [GTMBase64 desDecrypt:string];
         
         //解析结果
-        YQHLog(@"Response  -->\n" "URL:  %@\n" "data:\n%@\n", task.currentRequest.URL, value);
+        YQHLog(@"\n\n\n响应结果：Response  -->" "URL:  %@\n" "value:\n%@\n\n\n", task.currentRequest.URL, value);
         
         [subscriber sendNext:value];
         [subscriber sendCompleted];

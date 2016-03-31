@@ -16,13 +16,30 @@
 @property (nonatomic, assign) NSInteger tourId;        // 出游路线Id
 @property (nonatomic, assign) NSInteger travelTime;    // 出发时间  （时间戳）
 
+@property (nonatomic, assign) NSInteger driverId;      // 司机id
+@property (nonatomic, strong) CarDetail *carDetail;
+
 // 车辆列表
 @property (nonatomic, strong) NSArray *cars;
+// 车辆类型
+@property (nonatomic, strong) NSArray *carTypes;
 
 /**
  *  @brief 获取包车的车辆信息（1.0）
  *
  */
 - (RACSignal *)getCarList;
+
+/**
+ *  @brief 获取车辆类型（1.0）
+ *
+ */
+- (RACSignal *)getCarTypeList;
+
+/**
+ *  @brief 获取司机车辆详情（1.0）
+ *
+ */
+- (RACSignal *)getDriverCarDetails;
 
 @end

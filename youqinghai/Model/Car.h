@@ -22,3 +22,10 @@
 @property (nonatomic, copy) NSString *travelTime;   // 出发时间
 
 @end
+
+@interface CarType : NSObject
+
+@property (nonatomic, assign) NSInteger Id;
+@property (nonatomic, copy) NSString *cartypename;
+
+@end

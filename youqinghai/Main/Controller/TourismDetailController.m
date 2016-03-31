@@ -81,13 +81,13 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     CustomMoveItemView *customMoveItemView = [[CustomMoveItemView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, 40) withItems:@[@"线路详情",@"线路评价",@"服务介绍"]];
-    [customMoveItemView setCustoMoveItemBlock:^(TourismDetailType type) {
+    [customMoveItemView setCustoMoveItemBlock:^(TourismDetailType type, UILabel *lab) {
         switch (type) {
             case TourismDetailTypeWithIntroduction: {
                 if (isRequestTourismDetail) {
                     self.myTableView.tableFooterView = self.tourismDetailView;
                 }else{
-                     [self loadTourisDetailsData];
+                    [self loadTourisDetailsData];
                 }
                 break;
             }

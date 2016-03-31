@@ -30,4 +30,19 @@
                          withPageIndex:(NSInteger)pageIndex
                           withPageSize:(NSInteger)pageSize;
 
+
+/**
+ *  @brief 获取车辆类型（1.0）
+ *
+ */
+- (RACSignal *)getCarTypeList;
+
+/**
+ *  @brief 获取司机车辆详情（1.0）
+ *
+ *  @param driverId 司机Id
+ *  @param userId   <#userId description#>
+ *
+ */
+- (RACSignal *)getDriverCarDetailsWithDriverId:(NSInteger)driverId withUserId:(NSInteger)userId;
 @end

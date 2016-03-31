@@ -26,6 +26,6 @@ typedef NS_ENUM(NSInteger, TourismDetailType) {
  */
 -(instancetype)initWithFrame:(CGRect)frame withItems:(NSArray *)items;
 
-@property (nonatomic, copy) void(^CustoMoveItemBlock)(TourismDetailType);
+@property (nonatomic, copy) void(^CustoMoveItemBlock)(TourismDetailType type,UILabel *lab);
 
 @end

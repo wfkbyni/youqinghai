@@ -28,4 +28,28 @@
     return signal;
 }
 
+-(RACSignal *)getCarTypeList{
+    
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getCarTypeList] map:^id(id value) {
+        
+        self.carTypes = [CarType mj_objectArrayWithKeyValuesArray:value];
+        
+        return self.carTypes;
+    }];
+    
+    return signal;
+}
+
+-(RACSignal *)getDriverCarDetails{
+    
+    RACSignal *signal = [[[RequestBaseAPI standardAPI] getDriverCarDetailsWithDriverId:self.driverId withUserId:myUserId] map:^id(id value) {
+        
+        self.carDetail = [CarDetail mj_objectWithKeyValues:value];
+        
+        return value;
+    }];
+    
+    return signal;
+}
+
 @end
