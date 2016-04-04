@@ -14,6 +14,12 @@
 		9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB481C9EF3C90067B8D5 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB4F1C9EF44A0067B8D5 /* GTMBase64+Des.m */; };
 		9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */; };
+		9A38A9BB1CB2ABF80057E611 /* DriverCarCellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9BA1CB2ABF80057E611 /* DriverCarCellHeaderView.m */; };
+		9A38A9BE1CB2AE180057E611 /* DriverCarCellFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9BD1CB2AE180057E611 /* DriverCarCellFooterView.m */; };
+		9A38A9C11CB2B59E0057E611 /* DriverCarCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9C01CB2B59E0057E611 /* DriverCarCommentTableViewCell.m */; };
+		9A38A9C51CB2B8A00057E611 /* DriverCarCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9C31CB2B8A00057E611 /* DriverCarCommentCell.m */; };
+		9A38A9C61CB2B8A00057E611 /* DriverCarCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A38A9C41CB2B8A00057E611 /* DriverCarCommentCell.xib */; };
+		9A38A9C91CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9C81CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m */; };
 		9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB51CA182FB004D17BA /* MainViewModel.m */; };
 		9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */; };
 		9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBC1CA18711004D17BA /* MainViewController.m */; };
@@ -38,6 +44,8 @@
 		9AB9F1C31CAD781B0091967F /* CarDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1C11CAD781B0091967F /* CarDetailController.m */; };
 		9AB9F1C41CAD781B0091967F /* CarDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB9F1C21CAD781B0091967F /* CarDetailController.xib */; };
 		9AB9F1C71CAD7B880091967F /* CarDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1C61CAD7B880091967F /* CarDetail.m */; };
+		9AB9F1CF1CB286250091967F /* DriverCarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1CE1CB286250091967F /* DriverCarHeaderView.m */; };
+		9AB9F1D31CB29FA90091967F /* DriverCarPivViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1D11CB29FA90091967F /* DriverCarPivViewTableViewCell.m */; };
 		9AD8325F1CA959C5002CE8B3 /* TourisEvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */; };
 		9AD832661CA96969002CE8B3 /* TourisEvaluateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832641CA96969002CE8B3 /* TourisEvaluateCell.m */; };
 		9AD8326D1CAAC579002CE8B3 /* ServiceIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8326C1CAAC579002CE8B3 /* ServiceIntroductionView.m */; };
@@ -82,6 +90,17 @@
 		9A1FEB4F1C9EF44A0067B8D5 /* GTMBase64+Des.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMBase64+Des.m"; sourceTree = "<group>"; };
 		9A1FEB551C9EF69A0067B8D5 /* RequestBaseAPI+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+User.h"; sourceTree = "<group>"; };
 		9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RequestBaseAPI+User.m"; sourceTree = "<group>"; };
+		9A38A9B91CB2ABF80057E611 /* DriverCarCellHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarCellHeaderView.h; sourceTree = "<group>"; };
+		9A38A9BA1CB2ABF80057E611 /* DriverCarCellHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarCellHeaderView.m; sourceTree = "<group>"; };
+		9A38A9BC1CB2AE180057E611 /* DriverCarCellFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarCellFooterView.h; sourceTree = "<group>"; };
+		9A38A9BD1CB2AE180057E611 /* DriverCarCellFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarCellFooterView.m; sourceTree = "<group>"; };
+		9A38A9BF1CB2B59E0057E611 /* DriverCarCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarCommentTableViewCell.h; sourceTree = "<group>"; };
+		9A38A9C01CB2B59E0057E611 /* DriverCarCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarCommentTableViewCell.m; sourceTree = "<group>"; };
+		9A38A9C21CB2B8A00057E611 /* DriverCarCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarCommentCell.h; sourceTree = "<group>"; };
+		9A38A9C31CB2B8A00057E611 /* DriverCarCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarCommentCell.m; sourceTree = "<group>"; };
+		9A38A9C41CB2B8A00057E611 /* DriverCarCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverCarCommentCell.xib; sourceTree = "<group>"; };
+		9A38A9C71CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarIntroduceTableViewCell.h; sourceTree = "<group>"; };
+		9A38A9C81CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarIntroduceTableViewCell.m; sourceTree = "<group>"; };
 		9A637DB41CA182FB004D17BA /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		9A637DB51CA182FB004D17BA /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewModel.m; path = youqinghai/Main/ViewModel/MainViewModel.m; sourceTree = SOURCE_ROOT; };
 		9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+Main.h"; sourceTree = "<group>"; };
@@ -122,6 +141,10 @@
 		9AB9F1C21CAD781B0091967F /* CarDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarDetailController.xib; sourceTree = "<group>"; };
 		9AB9F1C51CAD7B880091967F /* CarDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetail.h; sourceTree = "<group>"; };
 		9AB9F1C61CAD7B880091967F /* CarDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDetail.m; sourceTree = "<group>"; };
+		9AB9F1CD1CB286250091967F /* DriverCarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarHeaderView.h; sourceTree = "<group>"; };
+		9AB9F1CE1CB286250091967F /* DriverCarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarHeaderView.m; sourceTree = "<group>"; };
+		9AB9F1D01CB29FA90091967F /* DriverCarPivViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarPivViewTableViewCell.h; sourceTree = "<group>"; };
+		9AB9F1D11CB29FA90091967F /* DriverCarPivViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarPivViewTableViewCell.m; sourceTree = "<group>"; };
 		9AD8325D1CA959C5002CE8B3 /* TourisEvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateView.h; sourceTree = "<group>"; };
 		9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourisEvaluateView.m; sourceTree = "<group>"; };
 		9AD832631CA96969002CE8B3 /* TourisEvaluateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateCell.h; sourceTree = "<group>"; };
@@ -390,6 +413,21 @@
 				9AD832AD1CAC1B28002CE8B3 /* CarListCell.xib */,
 				9AB9F1BD1CAD64190091967F /* CarTypeTableView.h */,
 				9AB9F1BE1CAD64190091967F /* CarTypeTableView.m */,
+				9AB9F1CD1CB286250091967F /* DriverCarHeaderView.h */,
+				9AB9F1CE1CB286250091967F /* DriverCarHeaderView.m */,
+				9AB9F1D01CB29FA90091967F /* DriverCarPivViewTableViewCell.h */,
+				9AB9F1D11CB29FA90091967F /* DriverCarPivViewTableViewCell.m */,
+				9A38A9B91CB2ABF80057E611 /* DriverCarCellHeaderView.h */,
+				9A38A9BA1CB2ABF80057E611 /* DriverCarCellHeaderView.m */,
+				9A38A9BC1CB2AE180057E611 /* DriverCarCellFooterView.h */,
+				9A38A9BD1CB2AE180057E611 /* DriverCarCellFooterView.m */,
+				9A38A9BF1CB2B59E0057E611 /* DriverCarCommentTableViewCell.h */,
+				9A38A9C01CB2B59E0057E611 /* DriverCarCommentTableViewCell.m */,
+				9A38A9C21CB2B8A00057E611 /* DriverCarCommentCell.h */,
+				9A38A9C31CB2B8A00057E611 /* DriverCarCommentCell.m */,
+				9A38A9C41CB2B8A00057E611 /* DriverCarCommentCell.xib */,
+				9A38A9C71CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.h */,
+				9A38A9C81CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -547,6 +585,7 @@
 				9A637DD01CA2DBFF004D17BA /* TourismTypeItemCell.xib in Resources */,
 				9A637DC71CA2D7D6004D17BA /* TourismTypeCell.xib in Resources */,
 				9A637DEF1CA58846004D17BA /* TouristroutesViewController.xib in Resources */,
+				9A38A9C61CB2B8A00057E611 /* DriverCarCommentCell.xib in Resources */,
 				9AB9F1C41CAD781B0091967F /* CarDetailController.xib in Resources */,
 				9AF1C0201C9ED3E100AD2FC1 /* LaunchScreen.storyboard in Resources */,
 				9A637DD51CA2E580004D17BA /* RecommendTypeCell.xib in Resources */,
@@ -618,9 +657,12 @@
 				9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */,
 				9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */,
 				9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */,
+				9A38A9BB1CB2ABF80057E611 /* DriverCarCellHeaderView.m in Sources */,
 				9A637DF81CA626C2004D17BA /* CustomMoveItemView.m in Sources */,
 				9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */,
 				9AD8327F1CAC0EB7002CE8B3 /* CarListViewController.m in Sources */,
+				9A38A9C91CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m in Sources */,
+				9AB9F1D31CB29FA90091967F /* DriverCarPivViewTableViewCell.m in Sources */,
 				9AD832A81CAC1727002CE8B3 /* Traveltrip.m in Sources */,
 				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
 				9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */,
@@ -632,15 +674,18 @@
 				9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */,
 				9AD832A31CAC1727002CE8B3 /* HomePageData.m in Sources */,
 				9AB9F1BF1CAD64190091967F /* CarTypeTableView.m in Sources */,
+				9A38A9C51CB2B8A00057E611 /* DriverCarCommentCell.m in Sources */,
 				9AD832A11CAC1727002CE8B3 /* Banner.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
 				9AD832A61CAC1727002CE8B3 /* TourisEvaluate.m in Sources */,
 				9A637DCE1CA2DBEE004D17BA /* TourismTypeItemCell.m in Sources */,
+				9AB9F1CF1CB286250091967F /* DriverCarHeaderView.m in Sources */,
 				9A637DE61CA44279004D17BA /* RedirectViewController.m in Sources */,
 				9AD832891CAC1398002CE8B3 /* CarViewModel.m in Sources */,
 				9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */,
 				9AD832A51CAC1727002CE8B3 /* ServiceIntroduction.m in Sources */,
 				9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */,
+				9A38A9BE1CB2AE180057E611 /* DriverCarCellFooterView.m in Sources */,
 				9AD832861CAC106D002CE8B3 /* RequestBaseAPI+Car.m in Sources */,
 				9A637DF41CA59584004D17BA /* TourismDetailController.m in Sources */,
 				9A637DC11CA18993004D17BA /* TempViewController.m in Sources */,
@@ -648,6 +693,7 @@
 				9AD832A91CAC1727002CE8B3 /* Trip.m in Sources */,
 				9A1FEB3B1C9EE1770067B8D5 /* BaseViewController.m in Sources */,
 				9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */,
+				9A38A9C11CB2B59E0057E611 /* DriverCarCommentTableViewCell.m in Sources */,
 				9AD8326D1CAAC579002CE8B3 /* ServiceIntroductionView.m in Sources */,
 				9AF1C0121C9ED3E100AD2FC1 /* main.m in Sources */,
 				9AB9F1C31CAD781B0091967F /* CarDetailController.m in Sources */,
