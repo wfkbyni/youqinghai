@@ -20,6 +20,9 @@
 		9A38A9C51CB2B8A00057E611 /* DriverCarCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9C31CB2B8A00057E611 /* DriverCarCommentCell.m */; };
 		9A38A9C61CB2B8A00057E611 /* DriverCarCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A38A9C41CB2B8A00057E611 /* DriverCarCommentCell.xib */; };
 		9A38A9C91CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9C81CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m */; };
+		9A38A9D01CB40A1F0057E611 /* ConfirmOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9CF1CB40A1F0057E611 /* ConfirmOrderController.m */; };
+		9A38A9D31CB40B8D0057E611 /* RelationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9D21CB40B8D0057E611 /* RelationView.m */; };
+		9A38A9D61CB4162B0057E611 /* CheckBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9D51CB4162B0057E611 /* CheckBoxView.m */; };
 		9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB51CA182FB004D17BA /* MainViewModel.m */; };
 		9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */; };
 		9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBC1CA18711004D17BA /* MainViewController.m */; };
@@ -101,6 +104,12 @@
 		9A38A9C41CB2B8A00057E611 /* DriverCarCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverCarCommentCell.xib; sourceTree = "<group>"; };
 		9A38A9C71CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarIntroduceTableViewCell.h; sourceTree = "<group>"; };
 		9A38A9C81CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarIntroduceTableViewCell.m; sourceTree = "<group>"; };
+		9A38A9CE1CB40A1F0057E611 /* ConfirmOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderController.h; sourceTree = "<group>"; };
+		9A38A9CF1CB40A1F0057E611 /* ConfirmOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderController.m; sourceTree = "<group>"; };
+		9A38A9D11CB40B8D0057E611 /* RelationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelationView.h; sourceTree = "<group>"; };
+		9A38A9D21CB40B8D0057E611 /* RelationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelationView.m; sourceTree = "<group>"; };
+		9A38A9D41CB4162B0057E611 /* CheckBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckBoxView.h; sourceTree = "<group>"; };
+		9A38A9D51CB4162B0057E611 /* CheckBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckBoxView.m; sourceTree = "<group>"; };
 		9A637DB41CA182FB004D17BA /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		9A637DB51CA182FB004D17BA /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewModel.m; path = youqinghai/Main/ViewModel/MainViewModel.m; sourceTree = SOURCE_ROOT; };
 		9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+Main.h"; sourceTree = "<group>"; };
@@ -321,6 +330,43 @@
 			name = ResponseBaseData;
 			sourceTree = "<group>";
 		};
+		9A38A9CA1CB409F10057E611 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				9A38A9CB1CB409F10057E611 /* Controller */,
+				9A38A9CC1CB409F10057E611 /* View */,
+				9A38A9CD1CB409F10057E611 /* ViewModel */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		9A38A9CB1CB409F10057E611 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A38A9CE1CB40A1F0057E611 /* ConfirmOrderController.h */,
+				9A38A9CF1CB40A1F0057E611 /* ConfirmOrderController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A38A9CC1CB409F10057E611 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A38A9D11CB40B8D0057E611 /* RelationView.h */,
+				9A38A9D21CB40B8D0057E611 /* RelationView.m */,
+				9A38A9D41CB4162B0057E611 /* CheckBoxView.h */,
+				9A38A9D51CB4162B0057E611 /* CheckBoxView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A38A9CD1CB409F10057E611 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9A637DBA1CA186EE004D17BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +541,7 @@
 				9A1FEB3C1C9EE2CA0067B8D5 /* Request API */,
 				9A1FEB381C9EE1770067B8D5 /* BaseViewController */,
 				9AD8328D1CAC1727002CE8B3 /* Model */,
+				9A38A9CA1CB409F10057E611 /* Order */,
 				9AD832741CAC0E2B002CE8B3 /* Car */,
 				9A1FEB341C9EE1470067B8D5 /* Main */,
 				9AF1C0131C9ED3E100AD2FC1 /* AppDelegate.h */,
@@ -657,6 +704,7 @@
 				9A637DD41CA2E580004D17BA /* RecommendTypeCell.m in Sources */,
 				9AF1C0151C9ED3E100AD2FC1 /* AppDelegate.m in Sources */,
 				9A637DC61CA2D7D6004D17BA /* TourismTypeCell.m in Sources */,
+				9A38A9D31CB40B8D0057E611 /* RelationView.m in Sources */,
 				9A38A9BB1CB2ABF80057E611 /* DriverCarCellHeaderView.m in Sources */,
 				9A637DF81CA626C2004D17BA /* CustomMoveItemView.m in Sources */,
 				9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */,
@@ -670,10 +718,12 @@
 				9AD832A71CAC1727002CE8B3 /* TourismType.m in Sources */,
 				9AD832661CA96969002CE8B3 /* TourisEvaluateCell.m in Sources */,
 				9A1FEB401C9EE4D20067B8D5 /* RequestBaseAPI.m in Sources */,
+				9A38A9D01CB40A1F0057E611 /* ConfirmOrderController.m in Sources */,
 				9AD832701CAAC5BE002CE8B3 /* NSString+Helper.m in Sources */,
 				9A637E041CA6F00C004D17BA /* TourismDetailView.m in Sources */,
 				9AD832A31CAC1727002CE8B3 /* HomePageData.m in Sources */,
 				9AB9F1BF1CAD64190091967F /* CarTypeTableView.m in Sources */,
+				9A38A9D61CB4162B0057E611 /* CheckBoxView.m in Sources */,
 				9A38A9C51CB2B8A00057E611 /* DriverCarCommentCell.m in Sources */,
 				9AD832A11CAC1727002CE8B3 /* Banner.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,

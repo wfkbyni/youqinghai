@@ -23,7 +23,12 @@
 
 -(void)setTourismType:(TourismType *)tourismType{
  
-    [self.typeImgUrlBtn sd_setImageWithURL:[NSURL URLWithString:tourismType.typeImgUrl] forState:UIControlStateNormal placeholderImage:nil];
+
+    [self.typeImgUrlBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:tourismType.typeImgUrl] forState:UIControlStateNormal completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        image = [self.typeImgUrlBtn clipImage:image toSize:self.typeImgUrlBtn.frame.size];
+        [self.typeImgUrlBtn setBackgroundImage:image forState:UIControlStateNormal];
+    }];
+    
     
     NSString *typeName = [tourismType.typeName stringByReplacingOccurrencesOfString:@"\r\n" withString:@""];
     [self.typeNameLab setText:typeName];

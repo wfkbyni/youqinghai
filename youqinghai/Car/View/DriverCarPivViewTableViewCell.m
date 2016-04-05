@@ -35,14 +35,31 @@
     return self;
 }
 
+- (void)setImgList:(NSArray *)imgList{
+    _imgList = imgList;
+    [self.myCollectionView reloadData];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 6;
+    return _imgList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
- 
-    [cell viewWithBorderWidth:2 WithBorderColor:[UIColor colorWithRed:arc4random_uniform(255.0f) / 255.0f green:arc4random_uniform(255.0f) / 255.0f blue:arc4random_uniform(255.0f) / 255.0f alpha:1]];
+    
+    UIImageView *imageView = [cell viewWithTag:100];
+    if (!imageView) {
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (kScreenSize.width - 20) / 3, 80)];
+        [cell.contentView addSubview:imageView];
+    }
+    
+    Img *img = _imgList[indexPath.row];
+    
+    NSURL *url = [NSURL URLWithString:img.imgUrl];
+    
+    [imageView sd_setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        imageView.image = [imageView clipImage:image toSize:imageView.frame.size];
+    }];
     
     return cell;
 }

@@ -14,6 +14,8 @@
 #import "DriverCarCommentTableViewCell.h"
 #import "DriverCarIntroduceTableViewCell.h"
 
+#import "ConfirmOrderController.h"
+
 @interface CarDetailController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) CarViewModel *carViewModel;
@@ -35,11 +37,7 @@
 
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    _carViewModel = [[CarViewModel alloc] init];
-    _carViewModel.driverId = self.car.Id;
-    [[_carViewModel getDriverCarDetails] subscribeNext:^(id x) {
-        
-    }];
+    [self requestData];
     
     _myTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _myTableView.dataSource = self;
@@ -54,8 +52,41 @@
     
     UIButton *charteredBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) + 7, kScreenSize.width, 60)];
     [charteredBtn setBackgroundColor:[UIColor orangeColor]];
-    [charteredBtn setTitle:@"我要包车" forState:UIControlStateNormal];
+    [charteredBtn setTitle:@"立即包车" forState:UIControlStateNormal];
+    [charteredBtn addTarget:self action:@selector(charteredAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:charteredBtn];
+}
+
+- (void)charteredAction:(id)sender{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:@"您确定要包该车吗?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:NULL];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        ConfirmOrderController *controller = [[ConfirmOrderController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }];
+    
+    [controller addAction:cancelAction];
+    [controller addAction:defaultAction];
+    
+    [self presentViewController:controller animated:YES completion:NULL];
+}
+
+- (void)requestData{
+    _carViewModel = [[CarViewModel alloc] init];
+    _carViewModel.driverId = self.car.Id;
+    [[_carViewModel getDriverCarDetails] subscribeError:^(NSError *error) {
+        
+    } completed:^{
+        
+    }];
+    
+    [RACObserve(self.carViewModel, carDetail) subscribeNext:^(CarDetail *carDetail) {
+        if (carDetail) {
+            [_driverCarHeaderView bindData:carDetail];
+            
+            [self.myTableView reloadData];
+        }
+    }];
 }
 
 - (UIView *)commonView{
@@ -113,6 +144,12 @@
         case 1:
             return 140.0f * 3 + 90;
             break;
+        case 2:
+        {
+            float height = [self.carViewModel.carDetail.driverInfo calHeightWithWidth:kScreenSize.width - 20 withFontSize:14];
+            return height + 50;
+        }
+            break;
         default:
             break;
     }
@@ -129,7 +166,7 @@
             if (!cell) {
                 cell = [[DriverCarPivViewTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DriverCarPivViewCell];
             }
-            
+            cell.imgList = _carViewModel.carDetail.imgList;
             return cell;
         }
             break;
@@ -140,6 +177,8 @@
                 cell = [[DriverCarCommentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DriverCarCommentViewCell];
             }
             
+            cell.evalist = _carViewModel.carDetail.evalist;
+            
             return cell;
         }
             break;
@@ -149,6 +188,8 @@
             if (!cell) {
                 cell = [[DriverCarIntroduceTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DriverCarIntroduceCell];
             }
+            
+            cell.driverInfo = self.carViewModel.carDetail.driverInfo;
             
             return cell;
         }
@@ -165,4 +206,16 @@
     return cell;
 }
 
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat yOffset = scrollView.contentOffset.y  ;
+    
+    if (yOffset < 0) {
+        CGFloat totalOffset = 250 + ABS(yOffset);
+        CGFloat f = totalOffset / 250;
+        
+        _driverCarHeaderView.bgImageView.frame = CGRectMake(- (width * f - width) / 2, yOffset, width * f, totalOffset);
+    }
+}
 @end

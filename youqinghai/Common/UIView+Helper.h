@@ -25,4 +25,14 @@
  */
 - (void)viewWithBorderWidth:(NSInteger)borderWidth WithBorderColor:(UIColor *)borderColor;
 
+/**
+ *  @brief 把图片压缩到指定大小
+ *
+ *  @param image <#image description#>
+ *  @param size  <#size description#>
+ *
+ *  @return <#return value description#>
+ */
+- (UIImage *)clipImage:(UIImage *)image toSize:(CGSize)size;
+
 @end

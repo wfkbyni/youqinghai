@@ -10,4 +10,6 @@
 
 @interface DriverCarCommentCell : UITableViewCell
 
+@property (nonatomic, strong) Eav *eav;
+
 @end

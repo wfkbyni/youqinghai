@@ -10,4 +10,6 @@
 
 @interface DriverCarIntroduceTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) NSString *driverInfo;
+
 @end

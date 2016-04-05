@@ -41,7 +41,7 @@ NSString const *getDriverCarDetails = @"app/driverCarInfo/getDriverCarDetails";
 
 -(RACSignal *)getDriverCarDetailsWithDriverId:(NSInteger)driverId withUserId:(NSInteger)userId{
     
-    NSString *params = [NSString stringWithFormat:@"server=%@&driverId＝%ld&userId=%ld",getDriverCarDetails,driverId,userId];
+    NSString *params = [NSString stringWithFormat:@"server=%@&driverId=%ld&userId=%ld",getDriverCarDetails,driverId,userId];
     
     return [self requestWithType:RequestAPITypePost params:[self getDesEncryptWithString:params]];
 }

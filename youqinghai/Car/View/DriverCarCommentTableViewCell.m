@@ -36,16 +36,23 @@
     return self;
 }
 
+-(void)setEvalist:(NSArray *)evalist{
+    _evalist = evalist;
+    
+    [self.myTableView reloadData];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 140;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return _evalist.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DriverCarCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.eav = _evalist[indexPath.row];
     return cell;
 }
 

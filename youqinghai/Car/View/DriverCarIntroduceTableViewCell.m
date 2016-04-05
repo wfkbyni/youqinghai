@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) DriverCarCellHeaderView *headerView;
 
-@property (nonatomic, strong) UIView *introduceView;
+@property (nonatomic, strong) UILabel *introduceView;
 @end
 
 @implementation DriverCarIntroduceTableViewCell
@@ -29,6 +29,15 @@
     return self;
 }
 
+- (void)setDriverInfo:(NSString *)driverInfo{
+    self.introduceView.text = driverInfo;
+    
+    float height = [driverInfo calHeightWithWidth:kScreenSize.width - 20 withFontSize:14];
+    CGRect frame = self.introduceView.frame;
+    frame.size.height = height;
+    self.introduceView.frame = frame;
+}
+
 - (DriverCarCellHeaderView *)headerView{
     
     if (!_headerView) {
@@ -38,10 +47,12 @@
     return _headerView;
 }
 
-- (UIView *)introduceView{
+- (UILabel *)introduceView{
     
     if (!_introduceView) {
-        _introduceView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, 100)];
+        _introduceView = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, kScreenSize.width - 20, 100)];
+        [_introduceView setFont:[UIFont systemFontOfSize:14]];
+        [_introduceView setNumberOfLines:0];
     }
     
     return  _introduceView;

@@ -16,6 +16,10 @@ typedef NS_ENUM(NSInteger, BtnClickEvent) {
 
 @interface DriverCarHeaderView : UIView
 
+@property (nonatomic, strong) UIImageView *bgImageView;
+
 @property (nonatomic, copy) void (^BtnClickEvent)(BtnClickEvent event);
+
+- (void)bindData:(CarDetail *)carDetail;
 
 @end

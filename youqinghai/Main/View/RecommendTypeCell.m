@@ -41,7 +41,10 @@
 
 -(void)setRecommend:(Recommend *)recommend{
     
-    [self.imgUrlBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:recommend.imgUrl] forState:UIControlStateNormal placeholderImage:nil];
+    [self.imgUrlBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:recommend.imgUrl] forState:UIControlStateNormal completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        image = [self.imgUrlBtn clipImage:image toSize:self.imgUrlBtn.frame.size];
+        [self.imgUrlBtn setBackgroundImage:image forState:UIControlStateNormal];
+    }];
     
     self.titleLab.text = recommend.title;
     

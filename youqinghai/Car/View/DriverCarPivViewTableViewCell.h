@@ -10,4 +10,6 @@
 
 @interface DriverCarPivViewTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) NSArray *imgList;
+
 @end

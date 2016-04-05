@@ -10,6 +10,10 @@
 
 @implementation CarDetail
 
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"Id":@"id"};
+}
+
 +(NSDictionary *)mj_objectClassInArray{
     return @{@"imgList":@"Img",@"evalist":@"Eav"};
 }

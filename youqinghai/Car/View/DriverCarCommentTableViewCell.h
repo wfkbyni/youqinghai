@@ -10,4 +10,6 @@
 
 @interface DriverCarCommentTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) NSArray *evalist;
+
 @end

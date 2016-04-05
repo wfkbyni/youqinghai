@@ -61,7 +61,11 @@
     /**-------------------------------------------------------------------------**/
     
     UIView *view = [[UIView alloc] initWithFrame:self.frame];
-    [view setBackgroundColor:[UIColor orangeColor]];
+    
+    _bgImageView = [[UIImageView alloc] initWithFrame:view.frame];
+    [_bgImageView setImage:[_bgImageView clipImage:[UIImage imageNamed:@"bg"] toSize:view.frame.size]];
+    
+    [view addSubview:_bgImageView];
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [backBtn setFrame:CGRectMake(10, 30, 40, 40)];
@@ -151,7 +155,7 @@
     UILabel *collectionLab = [[UILabel alloc] initWithFrame:CGRectMake((CGRectGetWidth(self.frame) - width) / 2 + width, CGRectGetMaxY(_carSeatsNum.frame) + 20, (CGRectGetWidth(self.frame) - width) / 2, 20)];
     [collectionLab setTextAlignment:NSTextAlignmentLeft];
     [collectionLab setTextColor:[UIColor whiteColor]];
-    [collectionLab setText:@"收藏"];
+    [collectionLab setText:@"评价"];
     
     [view addSubview:collectionLab];
     
@@ -176,15 +180,18 @@
     return view;
 }
 
-- (void)bindData{
-    //_sexImageView;
-    //_headImageView;
-    //_carName;
-    //_carTypeLabel;
-    //_carSeatsNum;
-    //_serviceCountLab;
-    //_drivingYearLabel;
-    //_collectionCountLab;
+- (void)bindData:(CarDetail *)carDetail{
+    _sexImageView.backgroundColor = carDetail.sex == 0 ? [UIColor redColor] : [UIColor blueColor];
+    [_headImageView sd_setImageWithURL:[NSURL URLWithString:carDetail.headUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        _headImageView.image = [_headImageView clipImage:image toSize:_headImageView.frame.size];
+        [_headImageView viewWithBorderWidth:2 WithBorderColor:[UIColor grayColor]];
+    }];
+    _carName.text = carDetail.nickname;
+    _carTypeLabel.text = carDetail.cartypename;
+    _carSeatsNum.text = [NSString stringWithFormat:@"%@ %ld座",carDetail.carname, carDetail.seatsnum];
+    _serviceCountLab.text = [NSString stringWithFormat:@"%ld 次",carDetail.sernum];
+    _drivingYearLabel.text = [NSString stringWithFormat:@"%ld 年",carDetail.driveage];
+    _collectionCountLab.text = [NSString stringWithFormat:@"%ld %%", carDetail.eav];
 }
 
 - (void)btnAction:(UIButton *)sender{

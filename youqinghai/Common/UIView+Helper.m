@@ -20,4 +20,19 @@
     self.layer.borderWidth = borderWidth;
     self.layer.masksToBounds = YES;
 }
+
+- (UIImage *)clipImage:(UIImage *)image toSize:(CGSize)size {
+    UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
+    
+    CGSize imgSize = image.size;
+    CGFloat x = MAX(size.width / imgSize.width, size.height / imgSize.height);
+    CGSize resultSize = CGSizeMake(x * imgSize.width, x * imgSize.height);
+    
+    [image drawInRect:CGRectMake(0, 0, resultSize.width, resultSize.height)];
+    
+    UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return finalImage;
+}
 @end
