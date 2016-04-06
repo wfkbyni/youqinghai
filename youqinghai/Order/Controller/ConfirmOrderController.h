@@ -11,4 +11,8 @@
 
 @interface ConfirmOrderController : BaseViewController
 
+@property (nonatomic, assign) NSInteger traveId;
+@property (nonatomic, assign) NSInteger carTypeId;
+
+
 @end

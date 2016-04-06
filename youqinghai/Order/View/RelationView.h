@@ -10,4 +10,6 @@
 
 @interface RelationView : UIView
 
+@property (nonatomic, strong) Order *order;
+
 @end

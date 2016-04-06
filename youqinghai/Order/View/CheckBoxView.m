@@ -38,8 +38,6 @@
         [noBtn setTitleColor:[UIColor colorWithRed:0.42 green:0.42 blue:0.43 alpha:1.00] forState:UIControlStateNormal];
         [self addSubview:noBtn];
         
-        
-        
     }
     return self;
 }

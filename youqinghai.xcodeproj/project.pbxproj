@@ -23,6 +23,8 @@
 		9A38A9D01CB40A1F0057E611 /* ConfirmOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9CF1CB40A1F0057E611 /* ConfirmOrderController.m */; };
 		9A38A9D31CB40B8D0057E611 /* RelationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9D21CB40B8D0057E611 /* RelationView.m */; };
 		9A38A9D61CB4162B0057E611 /* CheckBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9D51CB4162B0057E611 /* CheckBoxView.m */; };
+		9A38A9D91CB533F80057E611 /* TravelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9D81CB533F70057E611 /* TravelView.m */; };
+		9A38A9DC1CB539F30057E611 /* CalculateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A38A9DB1CB539F30057E611 /* CalculateView.m */; };
 		9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB51CA182FB004D17BA /* MainViewModel.m */; };
 		9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */; };
 		9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A637DBC1CA18711004D17BA /* MainViewController.m */; };
@@ -49,6 +51,10 @@
 		9AB9F1C71CAD7B880091967F /* CarDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1C61CAD7B880091967F /* CarDetail.m */; };
 		9AB9F1CF1CB286250091967F /* DriverCarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1CE1CB286250091967F /* DriverCarHeaderView.m */; };
 		9AB9F1D31CB29FA90091967F /* DriverCarPivViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9F1D11CB29FA90091967F /* DriverCarPivViewTableViewCell.m */; };
+		9AD4BE2B1CB54EA500C1C89B /* SubmitOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4BE2A1CB54EA500C1C89B /* SubmitOrderView.m */; };
+		9AD4BE2E1CB552D700C1C89B /* OrderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4BE2D1CB552D700C1C89B /* OrderViewModel.m */; };
+		9AD4BE311CB5532200C1C89B /* RequestBaseAPI+Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4BE301CB5532200C1C89B /* RequestBaseAPI+Order.m */; };
+		9AD4BE341CB556EE00C1C89B /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4BE331CB556EE00C1C89B /* Order.m */; };
 		9AD8325F1CA959C5002CE8B3 /* TourisEvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */; };
 		9AD832661CA96969002CE8B3 /* TourisEvaluateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD832641CA96969002CE8B3 /* TourisEvaluateCell.m */; };
 		9AD8326D1CAAC579002CE8B3 /* ServiceIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD8326C1CAAC579002CE8B3 /* ServiceIntroductionView.m */; };
@@ -110,6 +116,10 @@
 		9A38A9D21CB40B8D0057E611 /* RelationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelationView.m; sourceTree = "<group>"; };
 		9A38A9D41CB4162B0057E611 /* CheckBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckBoxView.h; sourceTree = "<group>"; };
 		9A38A9D51CB4162B0057E611 /* CheckBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckBoxView.m; sourceTree = "<group>"; };
+		9A38A9D71CB533F70057E611 /* TravelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelView.h; sourceTree = "<group>"; };
+		9A38A9D81CB533F70057E611 /* TravelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelView.m; sourceTree = "<group>"; };
+		9A38A9DA1CB539F30057E611 /* CalculateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateView.h; sourceTree = "<group>"; };
+		9A38A9DB1CB539F30057E611 /* CalculateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateView.m; sourceTree = "<group>"; };
 		9A637DB41CA182FB004D17BA /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		9A637DB51CA182FB004D17BA /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewModel.m; path = youqinghai/Main/ViewModel/MainViewModel.m; sourceTree = SOURCE_ROOT; };
 		9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+Main.h"; sourceTree = "<group>"; };
@@ -154,6 +164,14 @@
 		9AB9F1CE1CB286250091967F /* DriverCarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarHeaderView.m; sourceTree = "<group>"; };
 		9AB9F1D01CB29FA90091967F /* DriverCarPivViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverCarPivViewTableViewCell.h; sourceTree = "<group>"; };
 		9AB9F1D11CB29FA90091967F /* DriverCarPivViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverCarPivViewTableViewCell.m; sourceTree = "<group>"; };
+		9AD4BE291CB54EA500C1C89B /* SubmitOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitOrderView.h; sourceTree = "<group>"; };
+		9AD4BE2A1CB54EA500C1C89B /* SubmitOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitOrderView.m; sourceTree = "<group>"; };
+		9AD4BE2C1CB552D700C1C89B /* OrderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewModel.h; sourceTree = "<group>"; };
+		9AD4BE2D1CB552D700C1C89B /* OrderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewModel.m; sourceTree = "<group>"; };
+		9AD4BE2F1CB5532200C1C89B /* RequestBaseAPI+Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RequestBaseAPI+Order.h"; sourceTree = "<group>"; };
+		9AD4BE301CB5532200C1C89B /* RequestBaseAPI+Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RequestBaseAPI+Order.m"; sourceTree = "<group>"; };
+		9AD4BE321CB556EE00C1C89B /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		9AD4BE331CB556EE00C1C89B /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		9AD8325D1CA959C5002CE8B3 /* TourisEvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateView.h; sourceTree = "<group>"; };
 		9AD8325E1CA959C5002CE8B3 /* TourisEvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourisEvaluateView.m; sourceTree = "<group>"; };
 		9AD832631CA96969002CE8B3 /* TourisEvaluateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourisEvaluateCell.h; sourceTree = "<group>"; };
@@ -287,16 +305,18 @@
 		9A1FEB3C1C9EE2CA0067B8D5 /* Request API */ = {
 			isa = PBXGroup;
 			children = (
+				9A1FEB541C9EF65F0067B8D5 /* ResponseBaseData */,
 				9A1FEB3D1C9EE4BB0067B8D5 /* RequestAPI.h */,
 				9A1FEB3E1C9EE4D20067B8D5 /* RequestBaseAPI.h */,
 				9A1FEB3F1C9EE4D20067B8D5 /* RequestBaseAPI.m */,
-				9A1FEB541C9EF65F0067B8D5 /* ResponseBaseData */,
 				9A1FEB551C9EF69A0067B8D5 /* RequestBaseAPI+User.h */,
 				9A1FEB561C9EF69A0067B8D5 /* RequestBaseAPI+User.m */,
 				9A637DB71CA1831F004D17BA /* RequestBaseAPI+Main.h */,
 				9A637DB81CA1831F004D17BA /* RequestBaseAPI+Main.m */,
 				9AD832841CAC106D002CE8B3 /* RequestBaseAPI+Car.h */,
 				9AD832851CAC106D002CE8B3 /* RequestBaseAPI+Car.m */,
+				9AD4BE2F1CB5532200C1C89B /* RequestBaseAPI+Order.h */,
+				9AD4BE301CB5532200C1C89B /* RequestBaseAPI+Order.m */,
 			);
 			path = "Request API";
 			sourceTree = "<group>";
@@ -356,6 +376,12 @@
 				9A38A9D21CB40B8D0057E611 /* RelationView.m */,
 				9A38A9D41CB4162B0057E611 /* CheckBoxView.h */,
 				9A38A9D51CB4162B0057E611 /* CheckBoxView.m */,
+				9A38A9D71CB533F70057E611 /* TravelView.h */,
+				9A38A9D81CB533F70057E611 /* TravelView.m */,
+				9A38A9DA1CB539F30057E611 /* CalculateView.h */,
+				9A38A9DB1CB539F30057E611 /* CalculateView.m */,
+				9AD4BE291CB54EA500C1C89B /* SubmitOrderView.h */,
+				9AD4BE2A1CB54EA500C1C89B /* SubmitOrderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +389,8 @@
 		9A38A9CD1CB409F10057E611 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9AD4BE2C1CB552D700C1C89B /* OrderViewModel.h */,
+				9AD4BE2D1CB552D700C1C89B /* OrderViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -511,6 +539,8 @@
 				9AD832A01CAC1727002CE8B3 /* Trip.m */,
 				9AB9F1C51CAD7B880091967F /* CarDetail.h */,
 				9AB9F1C61CAD7B880091967F /* CarDetail.m */,
+				9AD4BE321CB556EE00C1C89B /* Order.h */,
+				9AD4BE331CB556EE00C1C89B /* Order.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -710,8 +740,11 @@
 				9A637DEE1CA58846004D17BA /* TouristroutesViewController.m in Sources */,
 				9AD8327F1CAC0EB7002CE8B3 /* CarListViewController.m in Sources */,
 				9A38A9C91CB2BB9C0057E611 /* DriverCarIntroduceTableViewCell.m in Sources */,
+				9A38A9D91CB533F80057E611 /* TravelView.m in Sources */,
 				9AB9F1D31CB29FA90091967F /* DriverCarPivViewTableViewCell.m in Sources */,
 				9AD832A81CAC1727002CE8B3 /* Traveltrip.m in Sources */,
+				9AD4BE341CB556EE00C1C89B /* Order.m in Sources */,
+				9AD4BE2B1CB54EA500C1C89B /* SubmitOrderView.m in Sources */,
 				9A637DB61CA182FB004D17BA /* MainViewModel.m in Sources */,
 				9A1FEB4A1C9EF3C90067B8D5 /* GTMBase64.m in Sources */,
 				9A1FEB441C9EEA120067B8D5 /* ResponseBaseData.m in Sources */,
@@ -726,6 +759,7 @@
 				9A38A9D61CB4162B0057E611 /* CheckBoxView.m in Sources */,
 				9A38A9C51CB2B8A00057E611 /* DriverCarCommentCell.m in Sources */,
 				9AD832A11CAC1727002CE8B3 /* Banner.m in Sources */,
+				9AD4BE2E1CB552D700C1C89B /* OrderViewModel.m in Sources */,
 				9A1FEB501C9EF44A0067B8D5 /* GTMBase64+Des.m in Sources */,
 				9AD832A61CAC1727002CE8B3 /* TourisEvaluate.m in Sources */,
 				9A637DCE1CA2DBEE004D17BA /* TourismTypeItemCell.m in Sources */,
@@ -734,12 +768,14 @@
 				9AD832891CAC1398002CE8B3 /* CarViewModel.m in Sources */,
 				9A1FEB571C9EF69A0067B8D5 /* RequestBaseAPI+User.m in Sources */,
 				9AD832A51CAC1727002CE8B3 /* ServiceIntroduction.m in Sources */,
+				9A38A9DC1CB539F30057E611 /* CalculateView.m in Sources */,
 				9A637DB91CA1831F004D17BA /* RequestBaseAPI+Main.m in Sources */,
 				9A38A9BE1CB2AE180057E611 /* DriverCarCellFooterView.m in Sources */,
 				9AD832861CAC106D002CE8B3 /* RequestBaseAPI+Car.m in Sources */,
 				9A637DF41CA59584004D17BA /* TourismDetailController.m in Sources */,
 				9A637DC11CA18993004D17BA /* TempViewController.m in Sources */,
 				9A637DCB1CA2D8AC004D17BA /* UIView+Helper.m in Sources */,
+				9AD4BE311CB5532200C1C89B /* RequestBaseAPI+Order.m in Sources */,
 				9AD832A91CAC1727002CE8B3 /* Trip.m in Sources */,
 				9A1FEB3B1C9EE1770067B8D5 /* BaseViewController.m in Sources */,
 				9A637DBD1CA18711004D17BA /* MainViewController.m in Sources */,
@@ -851,6 +887,7 @@
 			baseConfigurationReference = 79047B0703E19E40A713B1AD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = youqinghai/PrefixHeader.pch;
 				INFOPLIST_FILE = youqinghai/Info.plist;
@@ -866,6 +903,7 @@
 			baseConfigurationReference = 9F1F24795402E64451E9B903 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = youqinghai/PrefixHeader.pch;
 				INFOPLIST_FILE = youqinghai/Info.plist;

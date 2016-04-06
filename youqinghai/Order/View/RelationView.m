@@ -30,7 +30,7 @@
         NSArray *placeholders = @[@"请填写联系人姓名",@"请填写联系人电话",@"请填写紧急联系人姓名",@"请填写紧急联系人电话",@""];
         float leftWidth = 110;
         
-        [self addSubview:[self lineWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 2)]];
+        [self addSubview:[self lineWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 1)]];
         [self addSubview:[self titleWithFrame:CGRectMake(10, 2, leftWidth, 48) withTitle:titles[0]]];
         _textField1 = [self textFieldWithFrame:CGRectMake(leftWidth + 10, 2, CGRectGetWidth(self.frame) - leftWidth - 20, 48) withPlaceholder:placeholders[0]];
         [self addSubview:_textField1];
@@ -54,11 +54,34 @@
         [self addSubview:[self titleWithFrame:CGRectMake(10, 202, leftWidth, 48) withTitle:titles[4]]];
         CheckBoxView *checkBox = [[CheckBoxView alloc] initWithFrame:CGRectMake(leftWidth + 10, 202, CGRectGetWidth(self.frame) - leftWidth - 20, 48)];
         [self addSubview:checkBox];
+        [self addSubview:[self lineWithFrame:CGRectMake(0, 250, CGRectGetWidth(frame), 1)]];
         
-        [self addSubview:[self lineWithFrame:CGRectMake(0, 250, CGRectGetWidth(frame), 2)]];
+        [self bindModel];
     }
     
     return self;
+}
+
+-(void)setOrder:(Order *)order{
+    _order = order;
+}
+
+- (void)bindModel{
+    [_textField1.rac_textSignal subscribeNext:^(id x) {
+        self.order.contacts = x;
+    }];
+    
+    [_textField2.rac_textSignal subscribeNext:^(id x) {
+        self.order.contactsTel = x;
+    }];
+    
+    [_textField3.rac_textSignal subscribeNext:^(id x) {
+        self.order.urgent = x;
+    }];
+    
+    [_textField3.rac_textSignal subscribeNext:^(id x) {
+        self.order.urgentTel = x;
+    }];
 }
 
 // 分隔线

@@ -39,7 +39,7 @@
     
     [self requestData];
     
-    _myTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width, kScreenSize.height - 60)];
     _myTableView.dataSource = self;
     _myTableView.delegate = self;
     [self.view addSubview:_myTableView];
@@ -50,7 +50,7 @@
     
     [_myTableView setTableHeaderView:[self commonView]];
     
-    UIButton *charteredBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) + 7, kScreenSize.width, 60)];
+    UIButton *charteredBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, kScreenSize.height - 60, kScreenSize.width, 60)];
     [charteredBtn setBackgroundColor:[UIColor orangeColor]];
     [charteredBtn setTitle:@"立即包车" forState:UIControlStateNormal];
     [charteredBtn addTarget:self action:@selector(charteredAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -62,6 +62,8 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:NULL];
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         ConfirmOrderController *controller = [[ConfirmOrderController alloc] init];
+        controller.traveId = 1;
+        controller.carTypeId = 1;
         [self.navigationController pushViewController:controller animated:YES];
     }];
     
